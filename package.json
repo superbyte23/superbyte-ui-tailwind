@@ -1,6 +1,6 @@
 {
   "name": "superbyte-ui",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "description": "Superbyte UI — a free, open-source admin dashboard & UI kit rebuilt on Tailwind CSS v4.",
   "type": "module",
   "private": true,
