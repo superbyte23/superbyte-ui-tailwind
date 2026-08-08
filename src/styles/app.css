@@ -335,7 +335,6 @@
   }
   #toolbar > .app-container { padding-inline: 18px; height: 100%; display: flex; align-items: center; gap: 8px; }
   .tb-sep { width: 1px; height: 24px; background: var(--border); margin: 0 2px; flex-shrink: 0; }
-  .app-nav-toggle { display: none; }
 
   .breadcrumb-wrap { display: flex; align-items: center; flex: 1; overflow: hidden; margin: 0 4px; }
   .breadcrumb { display: flex; flex-wrap: nowrap; align-items: center; gap: 2px; }
@@ -366,6 +365,7 @@
     min-width: 18px; height: 18px; border-radius: 9px; display: flex; align-items: center; justify-content: center;
     padding: 0 4px;
   }
+  .app-nav-toggle { display: none; }
 
   /* Theme toggle icon swap — both lucide svgs live in the button, CSS shows one */
   .theme-icon-moon, .theme-icon-sun { display: inline-flex; align-items: center; justify-content: center; }
@@ -928,7 +928,7 @@
     box-shadow: 0 16px 40px rgba(0,0,0,.25); padding: 8px; z-index: 1100;
   }
   .layout-horizontal .side-submenu::before { content: ''; position: absolute; top: -10px; inset-inline: 0; height: 10px; }
-  .layout-horizontal .side-group.open > .side-submenu { display: block; animation: fadeIn .15s ease; }
+  .layout-horizontal .side-group.open > .side-submenu { display: none; }
   .layout-horizontal .side-group.open > .side-group-toggle,
   .layout-horizontal .side-group.kb-open > .side-group-toggle { color: var(--accent); }
   .layout-horizontal .side-group.open > .side-group-toggle .sg-icon,
