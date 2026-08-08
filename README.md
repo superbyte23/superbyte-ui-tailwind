@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/superbyte23/superbyte-ui-tailwind/main/public/img/brand.png" alt="Superbyte UI" width="120" height="auto" />
+
 # Superbyte UI
 
 **The admin dashboard that ships with everything.**
