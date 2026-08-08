@@ -1,0 +1,47 @@
+<!--
+title: Email
+crumb: Email
+script: email
+active: email
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Email</h1><p>three-pane client — folders, inbox and a reading pane</p></div>
+  </div>
+
+  <div class="card email-shell">
+    <aside class="email-folders">
+      <button type="button" class="btn btn-primary btn-block mb-3"><i data-lucide="pen-line"></i> Compose</button>
+      <nav class="d-flex flex-column gap-1" id="email-folders">
+        <button type="button" class="mail-folder active" data-folder="inbox"><i data-lucide="inbox"></i> Inbox <span class="badge ms-auto">5</span></button>
+        <button type="button" class="mail-folder" data-folder="starred"><i data-lucide="star"></i> Starred</button>
+        <button type="button" class="mail-folder" data-folder="sent"><i data-lucide="send"></i> Sent</button>
+        <button type="button" class="mail-folder" data-folder="drafts"><i data-lucide="file-edit"></i> Drafts <span class="badge ms-auto">2</span></button>
+        <button type="button" class="mail-folder" data-folder="trash"><i data-lucide="trash-2"></i> Trash</button>
+      </nav>
+      <div class="mt-4 d-flex align-center gap-2" style="font-size:12px;color:var(--text3)">
+        <div class="avatar-stack">
+          <div class="avatar-circle" style="background:#2961fd">AL</div>
+          <div class="avatar-circle" style="background:#0ea5e9">JD</div>
+        </div>
+        <span>2 of 6 online</span>
+      </div>
+    </aside>
+
+    <section class="email-list">
+      <div class="table-toolbar">
+        <div class="search-wrap">
+          <i data-lucide="search" class="search-icon"></i>
+          <input type="text" class="form-control search-input" id="email-search" placeholder="Search mail…">
+        </div>
+        <button type="button" class="icon-btn" title="Refresh"><i data-lucide="refresh-cw"></i></button>
+      </div>
+      <div id="email-rows" class="email-rows"></div>
+    </section>
+
+    <section class="email-pane" id="email-pane"></section>
+  </div>
+
+</section>

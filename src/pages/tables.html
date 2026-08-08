@@ -1,0 +1,112 @@
+<!--
+title: Tables
+crumb: Tables
+script: tables
+active: tables
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Tables</h1><p>static tables — the building blocks behind the datatable widget</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title"><i data-lucide="table"></i> Sortable table</div>
+      <button type="button" class="btn btn-sm btn-ghost"><i data-lucide="download"></i> Export CSV</button>
+    </div>
+    <div class="table-toolbar">
+      <div class="search-wrap">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" class="form-control search-input" id="tbl-search" placeholder="Filter transactions…">
+      </div>
+      <span class="mono-sm">6 records</span>
+    </div>
+    <table class="data-table" id="tx-table">
+      <thead>
+        <tr>
+          <th data-col="id">Transaction</th>
+          <th data-col="user">Customer</th>
+          <th data-col="amount">Amount</th>
+          <th data-col="status">Status</th>
+          <th data-col="date">Date</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="empty-state d-none" id="tx-empty"><i data-lucide="search-x" style="width:34px;height:34px"></i><p>No transactions match your filter.</p></div>
+  </div>
+
+  <div class="g-row g-4 cols-2 mt-4">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="rows-3"></i> Simple table</div>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr><th>Language</th><th>Framework</th><th>Bundle</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="name-cell">TypeScript</td><td>React</td><td class="mono-cell">58 kB</td></tr>
+          <tr><td class="name-cell">JavaScript</td><td>Vue</td><td class="mono-cell">34 kB</td></tr>
+          <tr><td class="name-cell">TypeScript</td><td>Svelte</td><td class="mono-cell">12 kB</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="list-plus"></i> Table with actions</div>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr><th>Member</th><th>Role</th><th style="text-align:end">Actions</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="d-flex align-center gap-2"><div class="avatar-circle">AL</div><span class="name-cell" style="font-weight:600">Ada L.</span></div></td>
+            <td><span class="tag tag-indigo">Admin</span></td>
+            <td>
+              <div class="row-actions">
+                <button type="button" class="row-btn" title="Edit"><i data-lucide="pencil"></i></button>
+                <button type="button" class="row-btn" title="View"><i data-lucide="eye"></i></button>
+                <button type="button" class="row-btn del" title="Delete"><i data-lucide="trash-2"></i></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><div class="d-flex align-center gap-2"><div class="avatar-circle">JD</div><span class="name-cell" style="font-weight:600">Jonas D.</span></div></td>
+            <td><span class="tag tag-sky">Editor</span></td>
+            <td>
+              <div class="row-actions">
+                <button type="button" class="row-btn" title="Edit"><i data-lucide="pencil"></i></button>
+                <button type="button" class="row-btn" title="View"><i data-lucide="eye"></i></button>
+                <button type="button" class="row-btn del" title="Delete"><i data-lucide="trash-2"></i></button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header">
+      <div class="card-title"><i data-lucide="menu"></i> Pagination</div>
+    </div>
+    <div class="card-body d-flex flex-wrap justify-between align-center gap-3">
+      <span class="mono-sm">Showing 1–10 of 1,248</span>
+      <ul class="pagination">
+        <li class="page-item disabled"><button type="button" class="page-link"><i data-lucide="chevron-left" style="width:14px;height:14px"></i></button></li>
+        <li class="page-item active"><button type="button" class="page-link">1</button></li>
+        <li class="page-item"><button type="button" class="page-link">2</button></li>
+        <li class="page-item"><button type="button" class="page-link">3</button></li>
+        <li class="page-item"><button type="button" class="page-link">…</button></li>
+        <li class="page-item"><button type="button" class="page-link">125</button></li>
+        <li class="page-item"><button type="button" class="page-link"><i data-lucide="chevron-right" style="width:14px;height:14px"></i></button></li>
+      </ul>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,119 @@
+<!--
+title: Dashboard
+crumb: Dashboard
+script: index
+active: index
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Dashboard</h1><p>overview · last synced 2 min ago</p></div>
+    <div class="d-flex gap-2">
+      <button class="btn btn-ghost btn-sm" onclick="showToast('success','Filter applied')"><i data-lucide="calendar"></i> Last 30 days</button>
+      <button class="btn btn-primary btn-sm" onclick="showToast('success','Export started')"><i data-lucide="download"></i> Export</button>
+    </div>
+  </div>
+
+  <div class="g-row cols-4 mb-4">
+    <div class="card stat-card">
+      <div class="top"><div class="stat-icon" style="background:var(--accent-bg);color:var(--accent-h)"><i data-lucide="dollar-sign"></i></div><span class="stat-delta up"><i data-lucide="arrow-up"></i> 12.4%</span></div>
+      <div class="value">$84,204</div>
+      <div class="label">Total Revenue</div>
+    </div>
+    <div class="card stat-card">
+      <div class="top"><div class="stat-icon" style="background:var(--green-bg);color:var(--green)"><i data-lucide="users"></i></div><span class="stat-delta up"><i data-lucide="arrow-up"></i> 4.1%</span></div>
+      <div class="value">2,318</div>
+      <div class="label">Active Users</div>
+    </div>
+    <div class="card stat-card">
+      <div class="top"><div class="stat-icon" style="background:var(--yellow-bg);color:var(--yellow)"><i data-lucide="shopping-cart"></i></div><span class="stat-delta down"><i data-lucide="arrow-down"></i> 2.3%</span></div>
+      <div class="value">1,042</div>
+      <div class="label">Orders</div>
+    </div>
+    <div class="card stat-card">
+      <div class="top"><div class="stat-icon" style="background:var(--danger-bg);color:var(--danger)"><i data-lucide="rotate-cw"></i></div><span class="stat-delta up"><i data-lucide="arrow-up"></i> 0.8%</span></div>
+      <div class="value">3.2%</div>
+      <div class="label">Churn Rate</div>
+    </div>
+  </div>
+
+  <div class="g-row cols-3 mb-4" style="grid-template-columns:minmax(0,2fr) minmax(0,1fr)">
+    <div class="card h-100">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="chart-area"></i> Revenue over time</div>
+        <div class="d-flex gap-1">
+          <span class="tag tag-indigo"><i data-lucide="circle"></i> Revenue</span>
+          <span class="tag tag-slate"><i data-lucide="circle"></i> Target</span>
+        </div>
+      </div>
+      <div class="card-body"><div style="height:230px"><canvas id="revenueChart"></canvas></div></div>
+    </div>
+    <div class="card h-100" id="traffic-sources">
+      <div class="card-header"><div class="card-title"><i data-lucide="pie-chart"></i> Traffic sources</div></div>
+      <div class="card-body d-flex flex-column align-items-center">
+        <div class="w-100" style="height:180px"><canvas id="trafficChart"></canvas></div>
+        <div class="w-100 mt-3">
+          <div class="d-flex justify-between mb-2" style="font-size:12px"><span><span class="legend-dot" style="background:#2961fd"></span>Direct</span><span class="font-mono" style="color:var(--text2)">48%</span></div>
+          <div class="d-flex justify-between mb-2" style="font-size:12px"><span><span class="legend-dot" style="background:#5b8bfc"></span>Organic</span><span class="font-mono" style="color:var(--text2)">31%</span></div>
+          <div class="d-flex justify-between" style="font-size:12px"><span><span class="legend-dot" style="background:#2e3547"></span>Referral</span><span class="font-mono" style="color:var(--text2)">21%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-row cols-3" style="grid-template-columns:minmax(0,7fr) minmax(0,5fr)">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="list"></i> Recent activity</div>
+        <span class="card-sub">7 events</span>
+      </div>
+      <div class="list-group list-group-flush">
+        <div class="list-group-item d-flex align-center gap-3">
+          <div class="stat-icon" style="background:var(--green-bg);color:var(--green);width:30px;height:30px;font-size:12px"><i data-lucide="check"></i></div>
+          <div class="flex-1"><div style="color:var(--text);font-weight:500;font-size:13px">Deploy <span class="font-mono" style="color:var(--text3)">#a92f1c</span> succeeded</div><div style="font-size:11px;color:var(--text3)">production · 12 minutes ago</div></div>
+          <span class="tag tag-green">passed</span>
+        </div>
+        <div class="list-group-item d-flex align-center gap-3">
+          <div class="stat-icon" style="background:var(--accent-bg);color:var(--accent-h);width:30px;height:30px;font-size:12px"><i data-lucide="user-plus"></i></div>
+          <div class="flex-1"><div style="color:var(--text);font-weight:500;font-size:13px">Maria Santos joined the Editors team</div><div style="font-size:11px;color:var(--text3)">45 minutes ago</div></div>
+          <span class="tag tag-indigo">team</span>
+        </div>
+        <div class="list-group-item d-flex align-center gap-3">
+          <div class="stat-icon" style="background:var(--yellow-bg);color:var(--yellow);width:30px;height:30px;font-size:12px"><i data-lucide="alert-triangle"></i></div>
+          <div class="flex-1"><div style="color:var(--text);font-weight:500;font-size:13px">Disk usage crossed 80% on <span class="font-mono" style="color:var(--text3)">db-02</span></div><div style="font-size:11px;color:var(--text3)">1 hour ago</div></div>
+          <span class="tag tag-amber">warning</span>
+        </div>
+        <div class="list-group-item d-flex align-center gap-3">
+          <div class="stat-icon" style="background:var(--danger-bg);color:var(--danger);width:30px;height:30px;font-size:12px"><i data-lucide="x"></i></div>
+          <div class="flex-1"><div style="color:var(--text);font-weight:500;font-size:13px">Build <span class="font-mono" style="color:var(--text3)">#a91e0b</span> failed — 2 tests</div><div style="font-size:11px;color:var(--text3)">2 hours ago</div></div>
+          <span class="tag tag-red">failed</span>
+        </div>
+      </div>
+    </div>
+    <div class="card h-100">
+      <div class="card-header"><div class="card-title"><i data-lucide="target"></i> Team quota</div></div>
+      <div class="card-body d-flex flex-column gap-3">
+        <div>
+          <div class="d-flex justify-between mb-2" style="font-size:12.5px"><span style="color:var(--text2)">API requests</span><span class="font-mono" style="color:var(--text3)">84,204 / 100,000</span></div>
+          <div class="progress"><div class="progress-bar" style="width:84%"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-2" style="font-size:12.5px"><span style="color:var(--text2)">Storage</span><span class="font-mono" style="color:var(--text3)">61.2 GB / 100 GB</span></div>
+          <div class="progress"><div class="progress-bar" style="width:61%;background:var(--green)"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-2" style="font-size:12.5px"><span style="color:var(--text2)">Seats used</span><span class="font-mono" style="color:var(--text3)">18 / 20</span></div>
+          <div class="progress"><div class="progress-bar" style="width:90%;background:var(--yellow)"></div></div>
+        </div>
+        <div class="d-flex align-center justify-between pt-2" style="border-top:1px solid var(--border)">
+          <div class="avatar-stack">
+            <div class="avatar-circle">JC</div><div class="avatar-circle" style="background:#22c55e">MS</div><div class="avatar-circle" style="background:#f59e0b">RT</div><div class="avatar-circle" style="background:var(--surface3);color:var(--text2)">+15</div>
+          </div>
+          <button class="btn btn-ghost btn-sm" onclick="showToast('success','Demo only')">Manage</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

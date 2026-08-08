@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>%PAGE_TITLE%</title>
+<meta name="description" content="Superbyte UI is a free admin dashboard and UI kit — 49 ready-to-use pages, three layout modes, a theme customizer, RTL support and zero CDN dependencies.">
+<link rel="icon" href="/img/favicon-32.png"><link rel="icon" href="/img/favicon-192.png" sizes="192x192">
+<link rel="stylesheet" href="/src/styles/app.css">
+<link rel="stylesheet" href="/src/styles/landing.css">
+<script src="/pre-paint.js"></script>
+</head>
+<body>
+
+<!-- ═══ TOP NAV ══════════════════════════════════════════════════════════ -->
+<header class="lnd-nav">
+  <div class="lnd-container lnd-nav-inner">
+    <a class="lnd-brand" href="#top">
+      <div class="logo-mark"><img src="/img/brand.png" alt="Superbyte UI"></div>
+      <span>Superbyte UI<span class="lnd-ver"> · v1.0.0</span></span>
+    </a>
+    <nav class="lnd-nav-links" id="lnd-nav-links">
+      <a href="#features">Features</a>
+      <a href="#pages">Pages</a>
+      <a href="#layouts">Layouts</a>
+      <a href="#customize">Customizer</a>
+      <a href="/preview/docs.html">Docs</a>
+    </nav>
+    <div class="lnd-nav-cta">
+      <button class="icon-btn" onclick="toggleLndTheme()" title="Toggle theme" aria-label="Toggle theme">
+        <span class="theme-icon-moon"><i data-lucide="moon"></i></span>
+        <span class="theme-icon-sun"><i data-lucide="sun"></i></span>
+      </button>
+      <button class="icon-btn lnd-nav-toggle" id="lnd-nav-toggle" aria-label="Toggle menu"><i data-lucide="menu"></i></button>
+      <a class="btn btn-primary" href="/preview/index.html"><i data-lucide="rocket"></i> Live preview</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+%CONTENT%
+
+</main>
+
+<!-- ═══ FOOTER ═══════════════════════════════════════════════════════════ -->
+<footer class="lnd-footer">
+  <div class="lnd-container lnd-footer-inner lnd-footer-pad">
+    <a class="lnd-brand" href="#top"><div class="logo-mark"><img src="/img/brand.png" alt="Superbyte UI"></div> Superbyte UI</a>
+    <div class="lnd-footer-links">
+      <a href="/preview/index.html">Preview</a>
+      <a href="/preview/docs.html">Docs</a>
+      <a href="/preview/layouts.html">Layouts</a>
+    </div>
+    <div class="lnd-footer-copy">
+      <span class="plan-tag"><span class="status-dot on"></span>v1.0.0</span>
+      <span>© 2026 Superbyte UI</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/src/js/pages/landing.js"></script>
+</body>
+</html>

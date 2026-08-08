@@ -1,0 +1,32 @@
+<!--
+title: Reset password
+layout: auth
+script: auth
+active: reset
+-->
+
+<div class="auth-panel">
+  <div class="auth-shield"><i data-lucide="lock-keyhole"></i></div>
+  <h1>Set a new password</h1>
+  <p class="sub">Choose a strong password you haven't used before.</p>
+
+  <form id="auth-form" novalidate>
+    <div class="mb-3">
+      <label class="form-label" for="reg-pass">New password</label>
+      <div class="input-group">
+        <input class="form-control" type="password" id="reg-pass" placeholder="At least 8 characters" required autofocus>
+        <button class="input-group-text" type="button" data-toggle-pass="reg-pass" aria-label="Show password"><i data-lucide="eye"></i></button>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="reg-cfpass">Confirm new password</label>
+      <div class="input-group">
+        <input class="form-control" type="password" id="reg-cfpass" placeholder="Repeat password" required>
+        <button class="input-group-text" type="button" data-toggle-pass="reg-cfpass" aria-label="Show password"><i data-lucide="eye"></i></button>
+      </div>
+    </div>
+    <button class="btn btn-primary w-100" type="submit">Reset password <i data-lucide="check"></i></button>
+  </form>
+</div>
+
+<div class="auth-foot"><a href="login.html" style="color:var(--accent-h)">Back to sign in</a></div>

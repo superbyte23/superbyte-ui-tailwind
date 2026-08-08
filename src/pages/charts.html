@@ -1,0 +1,62 @@
+<!--
+title: Charts
+crumb: Charts
+script: charts
+active: charts
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Charts</h1><p>Chart.js — every chart type, accent-aware and re-rendered on theme change</p></div>
+  </div>
+
+  <div class="g-row g-4 cols-2">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="trending-up"></i> Area chart</div>
+        <div class="card-sub">line + fill</div>
+      </div>
+      <div class="card-body"><div class="chart-wrap" style="height:260px"><canvas id="chart-area"></canvas></div></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="bar-chart-3"></i> Bar chart</div>
+        <div class="card-sub">grouped bars</div>
+      </div>
+      <div class="card-body"><div class="chart-wrap" style="height:260px"><canvas id="chart-bar"></canvas></div></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="chart-donut"></i> Doughnut</div>
+        <div class="card-sub">cutout 68%</div>
+      </div>
+      <div class="card-body">
+        <div class="g-row g-3 cols-2" style="align-items:center">
+          <div class="chart-wrap" style="height:220px"><canvas id="chart-doughnut"></canvas></div>
+          <div class="d-flex flex-column gap-2" id="chart-doughnut-legend">
+            <div class="d-flex align-center" style="font-size:12.5px;color:var(--text2)"><span class="legend-dot" style="background:var(--accent)"></span>Desktop <b class="ms-auto mono-sm">54%</b></div>
+            <div class="d-flex align-center" style="font-size:12.5px;color:var(--text2)"><span class="legend-dot" style="background:var(--accent-h)"></span>Mobile <b class="ms-auto mono-sm">31%</b></div>
+            <div class="d-flex align-center" style="font-size:12.5px;color:var(--text2)"><span class="legend-dot" style="background:var(--border2)"></span>Tablet <b class="ms-auto mono-sm">15%</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="radar"></i> Radar chart</div>
+        <div class="card-sub">performance</div>
+      </div>
+      <div class="card-body"><div class="chart-wrap" style="height:260px"><canvas id="chart-radar"></canvas></div></div>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header">
+      <div class="card-title"><i data-lucide="chart-scatter"></i> Combo chart</div>
+      <div class="card-sub">bar + line · dual dataset</div>
+    </div>
+    <div class="card-body"><div class="chart-wrap" style="height:280px"><canvas id="chart-combo"></canvas></div></div>
+  </div>
+
+</section>

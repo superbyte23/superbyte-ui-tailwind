@@ -1,0 +1,110 @@
+<!--
+title: Analytics
+crumb: Analytics
+script: analytics
+active: analytics
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Analytics</h1><p>sessions · last 7 days</p></div>
+    <div class="d-flex gap-2">
+      <button class="btn btn-ghost btn-sm" onclick="showToast('success','Filter applied')"><i data-lucide="calendar"></i> Last 7 days</button>
+      <button class="btn btn-primary btn-sm" onclick="showToast('success','Report downloaded')"><i data-lucide="download"></i> Export report</button>
+    </div>
+  </div>
+
+  <div class="g-row cols-4 mb-4">
+    <div class="card stat-card">
+      <div class="top"><div class="stat-icon" style="background:var(--accent-bg);color:var(--accent-h)"><i data-lucide="eye"></i></div><span class="stat-delta up"><i data-lucide="arrow-up"></i> 8.2%</span></div>
+      <div class="value">48,203</div>
+      <div class="label">Total sessions</div>
+    </div>
+    <div class="card stat-card">
+      <div class="top"><div class="stat-icon" style="background:var(--green-bg);color:var(--green)"><i data-lucide="users"></i></div><span class="stat-delta up"><i data-lucide="arrow-up"></i> 3.6%</span></div>
+      <div class="value">31,840</div>
+      <div class="label">Unique visitors</div>
+    </div>
+    <div class="card stat-card">
+      <div class="top"><div class="stat-icon" style="background:var(--yellow-bg);color:var(--yellow)"><i data-lucide="mouse-pointer-click"></i></div><span class="stat-delta down"><i data-lucide="arrow-down"></i> 1.1%</span></div>
+      <div class="value">2.84%</div>
+      <div class="label">Conversion rate</div>
+    </div>
+    <div class="card stat-card">
+      <div class="top"><div class="stat-icon" style="background:var(--danger-bg);color:var(--danger)"><i data-lucide="footprints"></i></div><span class="stat-delta down"><i data-lucide="arrow-down"></i> 0.4%</span></div>
+      <div class="value">68.2%</div>
+      <div class="label">Bounce rate</div>
+    </div>
+  </div>
+
+  <div class="g-row cols-3 mb-4" style="grid-template-columns:minmax(0,2fr) minmax(0,1fr)">
+    <div class="card h-100">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="chart-line"></i> Sessions over time</div>
+        <div class="d-flex gap-1">
+          <span class="tag tag-indigo"><i data-lucide="circle"></i> Sessions</span>
+          <span class="tag tag-slate"><i data-lucide="circle"></i> Visitors</span>
+        </div>
+      </div>
+      <div class="card-body"><div style="height:230px"><canvas id="sessionsChart"></canvas></div></div>
+    </div>
+    <div class="card h-100" id="devices-card">
+      <div class="card-header"><div class="card-title"><i data-lucide="smartphone"></i> Devices</div></div>
+      <div class="card-body d-flex flex-column align-items-center">
+        <div class="w-100" style="height:180px"><canvas id="devicesChart"></canvas></div>
+        <div class="w-100 mt-3">
+          <div class="d-flex justify-between mb-2" style="font-size:12px"><span><span class="legend-dot" style="background:#2961fd"></span>Desktop</span><span class="font-mono" style="color:var(--text2)">54%</span></div>
+          <div class="d-flex justify-between mb-2" style="font-size:12px"><span><span class="legend-dot" style="background:#5b8bfc"></span>Mobile</span><span class="font-mono" style="color:var(--text2)">38%</span></div>
+          <div class="d-flex justify-between" style="font-size:12px"><span><span class="legend-dot" style="background:#2e3547"></span>Tablet</span><span class="font-mono" style="color:var(--text2)">8%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-row cols-3" style="grid-template-columns:minmax(0,6fr) minmax(0,6fr)">
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="globe"></i> Top pages</div></div>
+      <div class="card-body d-flex flex-column gap-4">
+        <div>
+          <div class="d-flex justify-between mb-2" style="font-size:12.5px"><span style="color:var(--text2)">/dashboard</span><span class="font-mono" style="color:var(--text3)">12,480</span></div>
+          <div class="progress"><div class="progress-bar" style="width:100%"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-2" style="font-size:12.5px"><span style="color:var(--text2)">/records</span><span class="font-mono" style="color:var(--text3)">9,204</span></div>
+          <div class="progress"><div class="progress-bar" style="width:74%;background:var(--green)"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-2" style="font-size:12.5px"><span style="color:var(--text2)">/analytics</span><span class="font-mono" style="color:var(--text3)">6,871</span></div>
+          <div class="progress"><div class="progress-bar" style="width:55%;background:var(--yellow)"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-2" style="font-size:12.5px"><span style="color:var(--text2)">/docs</span><span class="font-mono" style="color:var(--text3)">4,392</span></div>
+          <div class="progress"><div class="progress-bar" style="width:35%;background:var(--danger)"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="users"></i> Acquisition channels</div></div>
+      <div class="card-body d-flex flex-column gap-4">
+        <div>
+          <div class="d-flex justify-between mb-2" style="font-size:12.5px"><span style="color:var(--text2)">Organic search</span><span class="font-mono" style="color:var(--text3)">18,204 · 44%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:44%"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-2" style="font-size:12.5px"><span style="color:var(--text2)">Direct</span><span class="font-mono" style="color:var(--text3)">12,846 · 31%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:31%;background:var(--green)"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-2" style="font-size:12.5px"><span style="color:var(--text2)">Referral</span><span class="font-mono" style="color:var(--text3)">6,510 · 16%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:16%;background:var(--yellow)"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-2" style="font-size:12.5px"><span style="color:var(--text2)">Social</span><span class="font-mono" style="color:var(--text3)">3,643 · 9%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:9%;background:var(--danger)"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

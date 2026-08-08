@@ -1,0 +1,70 @@
+<!--
+title: RTL
+crumb: RTL
+active: rtl
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>RTL</h1><p>right-to-left support via logical properties — flip <code>dir</code> and it just works</p></div>
+  </div>
+
+  <div class="g-row g-4 cols-2">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="align-start-vertical"></i> LTR (default)</div>
+      </div>
+      <div class="card-body d-flex flex-column gap-3">
+        <div class="d-flex align-center gap-2">
+          <button type="button" class="icon-btn"><i data-lucide="settings"></i></button>
+          <span style="font-size:13px;color:var(--text2)">Toolbar flows left → right</span>
+          <button type="button" class="btn btn-sm btn-primary ms-auto">Action</button>
+        </div>
+        <div class="d-flex gap-2">
+          <span class="tag tag-indigo"><i data-lucide="circle"></i> start</span>
+          <span class="tag tag-sky">middle</span>
+          <span class="tag tag-green">end</span>
+        </div>
+        <blockquote style="border-inline-start:3px solid var(--accent);padding:2px 14px;color:var(--text2);font-style:italic">Inline start border, aligned to the start side.</blockquote>
+        <input type="text" class="form-control" value="margin-inline: auto works">
+      </div>
+    </div>
+
+    <div dir="rtl" class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="align-end-vertical"></i> RTL (dir="rtl")</div>
+      </div>
+      <div class="card-body d-flex flex-column gap-3">
+        <div class="d-flex align-center gap-2">
+          <button type="button" class="icon-btn"><i data-lucide="settings"></i></button>
+          <span style="font-size:13px;color:var(--text2)">شريط الأدوات يتدفق من اليمين لليسار</span>
+          <button type="button" class="btn btn-sm btn-primary ms-auto">إجراء</button>
+        </div>
+        <div class="d-flex gap-2">
+          <span class="tag tag-indigo"><i data-lucide="circle"></i> بداية</span>
+          <span class="tag tag-sky">وسط</span>
+          <span class="tag tag-green">نهاية</span>
+        </div>
+        <blockquote style="border-inline-start:3px solid var(--accent);padding:2px 14px;color:var(--text2);font-style:italic">حد داخلي على الجانب، متوافق مع الاتجاه.</blockquote>
+        <input type="text" class="form-control" value="هذا نص تجريبي في وضع RTL">
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header">
+      <div class="card-title"><i data-lucide="code-2"></i> How it works</div>
+    </div>
+    <div class="card-body d-flex flex-column gap-3" style="font-size:13px;color:var(--text2);line-height:1.7">
+      <p>Every positional rule in <code>app.css</code> uses logical properties — <code>inset-inline-start</code>, <code>margin-inline</code>, <code>border-inline-start</code>, <code>padding-inline</code> — instead of physical <code>left</code>/<code>right</code>. The result: flipping the shell to RTL is a single <code>dir="rtl"</code> attribute on <code>&lt;html&gt;</code>.</p>
+      <ul style="padding-inline-start:20px;display:flex;flex-direction:column;gap:6px">
+        <li>Sidebar, toolbar, breadcrumbs and dropdowns mirror automatically.</li>
+        <li>Grid <code>.g-row</code> and flex flows follow the direction of the nearest <code>dir</code> ancestor.</li>
+        <li>Offcanvas slides from the other edge (<code>[dir="rtl"] .offcanvas</code>).</li>
+        <li>Monospace numbers and code stay left-aligned for scannability.</li>
+      </ul>
+    </div>
+  </div>
+
+</section>

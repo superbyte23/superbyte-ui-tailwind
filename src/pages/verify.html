@@ -1,0 +1,30 @@
+<!--
+title: Verify email
+layout: auth
+script: auth
+active: verify
+-->
+
+<div class="auth-panel">
+  <div class="auth-shield success"><i data-lucide="mail-check"></i></div>
+  <h1>Verify your email</h1>
+  <p class="sub">We sent a 6-digit code to <span class="font-mono" style="color:var(--text2)">j***@example.com</span>. Enter it below.</p>
+
+  <form id="auth-form" novalidate>
+    <div class="d-flex gap-2 mb-3 justify-center">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 1">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 2">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 3">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 4">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 5">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 6">
+    </div>
+    <div class="text-center mb-3" style="font-size:12px;color:var(--text3)">
+      Didn't get the code?
+      <button type="button" class="btn-link" data-resend="Resend code" style="color:var(--accent-h);background:none;border:0;font-size:12px;cursor:pointer">Resend code</button>
+    </div>
+    <button class="btn btn-primary w-100" type="submit">Verify email <i data-lucide="check"></i></button>
+  </form>
+</div>
+
+<div class="auth-foot">Changed your mind? <a href="login.html" style="color:var(--accent-h)">Back to sign in</a></div>

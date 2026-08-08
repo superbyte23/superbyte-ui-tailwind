@@ -1,0 +1,126 @@
+<!--
+title: Cards
+crumb: Cards
+active: cards
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Cards</h1><p>the workhorse container — every combination used across the kit</p></div>
+  </div>
+
+  <div class="g-row g-4 cols-3">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="credit-card"></i> Card with header</div>
+        <div class="card-sub">card-header</div>
+      </div>
+      <div class="card-body" style="font-size:13px;color:var(--text2);line-height:1.65">
+        A standard card. Header carries the title and optional mono subtitle; the body takes anything — forms, tables, grids, charts.
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-sm btn-ghost">Learn more</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="list-checks"></i> List group card</div>
+      </div>
+      <div class="list-group list-group-flush">
+        <div class="list-group-item"><i data-lucide="circle-check" style="width:15px;height:15px;color:var(--green)"></i> Design system shipped</div>
+        <div class="list-group-item"><i data-lucide="circle-check" style="width:15px;height:15px;color:var(--green)"></i> 48 pages migrated</div>
+        <div class="list-group-item"><i data-lucide="circle" style="width:15px;height:15px;color:var(--text3)"></i> Changelog drafted</div>
+        <div class="list-group-item"><i data-lucide="circle" style="width:15px;height:15px;color:var(--text3)"></i> Dark mode QA</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="chart-pie"></i> Progress card</div>
+      </div>
+      <div class="card-body d-flex flex-column gap-4">
+        <div>
+          <div class="d-flex justify-between mb-1"><span style="font-size:12.5px;color:var(--text2)">Frontend</span><span class="tag tag-indigo">80%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-1"><span style="font-size:12.5px;color:var(--text2)">Backend</span><span class="tag tag-sky">55%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:55%;background:var(--sky, #38bdf8)"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-1"><span style="font-size:12.5px;color:var(--text2)">Infra</span><span class="tag tag-amber">30%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:30%;background:var(--yellow)"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header d-flex align-center gap-2">
+        <div class="avatar-circle">SC</div>
+        <div class="flex-1">
+          <div style="font-size:13px;font-weight:700;color:var(--text)">Sara Chen</div>
+          <div style="font-size:11px;color:var(--text3)">sara@superbyte.dev</div>
+        </div>
+        <span class="status-dot on"></span>
+      </div>
+      <div class="card-body d-flex flex-column gap-2" style="font-size:13px;color:var(--text2)">
+        <div class="d-flex justify-between"><span>Team</span><b style="color:var(--text)">Design</b></div>
+        <div class="d-flex justify-between"><span>Projects</span><b style="color:var(--text)">12</b></div>
+        <div class="d-flex justify-between"><span>Role</span><span class="tag tag-green">Lead</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="gauge"></i> Metric card</div>
+      </div>
+      <div class="card-body">
+        <div class="d-flex justify-between align-start">
+          <div>
+            <div class="stat-card-value">48,392</div>
+            <div class="stat-card-label">Total visitors</div>
+          </div>
+          <div class="stat-icon"><i data-lucide="users"></i></div>
+        </div>
+        <div class="stat-delta up" style="margin-top:14px"><i data-lucide="trending-up" style="width:13px;height:13px"></i> 12.4% this week</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="image"></i> Media card</div>
+      </div>
+      <div class="card-body d-flex flex-column gap-3">
+        <div class="media-art"><i data-lucide="layout-dashboard" style="width:26px;height:26px"></i></div>
+        <div style="font-size:14px;font-weight:700;color:var(--text)">Superbyte UI v4</div>
+        <div style="font-size:12.5px;color:var(--text2);line-height:1.6">A complete admin dashboard rebuilt on Tailwind CSS v4 — 48 pages, zero framework dependencies, fully themable.</div>
+        <div class="d-flex align-center gap-2 mt-2">
+          <span class="tag tag-indigo">Tailwind v4</span>
+          <span class="tag tag-slate">Vanilla JS</span>
+          <span class="tag tag-pink">MIT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header">
+      <div class="card-title"><i data-lucide="layers"></i> Card with table</div>
+      <button type="button" class="btn btn-sm btn-ghost"><i data-lucide="download"></i> Export</button>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr><th>Region</th><th>Visitors</th><th>Conversion</th><th>Trend</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="name-cell">North America</td><td class="mono-cell">18,204</td><td class="mono-cell">4.2%</td><td><span class="tag tag-green"><i data-lucide="trending-up" style="width:11px;height:11px"></i> +2.1%</span></td></tr>
+        <tr><td class="name-cell">Europe</td><td class="mono-cell">14,882</td><td class="mono-cell">3.8%</td><td><span class="tag tag-green"><i data-lucide="trending-up" style="width:11px;height:11px"></i> +0.9%</span></td></tr>
+        <tr><td class="name-cell">Asia Pacific</td><td class="mono-cell">9,410</td><td class="mono-cell">2.9%</td><td><span class="tag tag-red"><i data-lucide="trending-down" style="width:11px;height:11px"></i> -0.4%</span></td></tr>
+        <tr><td class="name-cell">South America</td><td class="mono-cell">5,896</td><td class="mono-cell">3.1%</td><td><span class="tag tag-green"><i data-lucide="trending-up" style="width:11px;height:11px"></i> +1.2%</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>

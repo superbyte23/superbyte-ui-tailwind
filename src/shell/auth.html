@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>%PAGE_TITLE%</title>
+<link rel="icon" href="/img/favicon-32.png"><link rel="icon" href="/img/favicon-192.png" sizes="192x192">
+<link rel="stylesheet" href="/src/styles/app.css">
+<script src="/pre-paint.js"></script>
+</head>
+<body>
+
+<div id="toast-container"></div>
+
+<div class="auth-page">
+  <div class="auth-card">
+
+    <div class="auth-logo">
+      <div class="logo-mark"><img src="/img/brand.png" alt="Superbyte UI"></div>
+      Superbyte UI
+      <span style="color:var(--text3);font-weight:400;font-size:11px">v1.0.0</span>
+    </div>
+
+    <button class="icon-btn auth-theme-btn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+      <span class="theme-icon-moon"><i data-lucide="moon"></i></span>
+      <span class="theme-icon-sun"><i data-lucide="sun"></i></span>
+    </button>
+
+%CONTENT%
+
+    <div class="auth-legal">© 2026 Superbyte UI · <a href="#" onclick="showToast('success','Demo only')">Terms</a> · <a href="#" onclick="showToast('success','Demo only')">Privacy</a></div>
+
+  </div>
+</div>
+
+%PAGE_SCRIPT%
+<script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

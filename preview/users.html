@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Users</title>
+<link rel="icon" href="/img/favicon-32.png"><link rel="icon" href="/img/favicon-192.png" sizes="192x192">
+<link rel="stylesheet" href="/src/styles/app.css">
+
+<script src="/pre-paint.js"></script>
+</head>
+<body>
+
+<div id="toast-container"></div>
+<input type="file" id="drop-file" multiple hidden>
+
+<div id="app">
+
+  <div id="app-overlay" onclick="closeAppNav()"></div>
+
+  <!-- SIDEBAR -->
+  <div id="app-nav">
+    <div class="app-container">
+      <div class="app-logo">
+        <div class="logo-mark"><img src="/img/brand.png" alt="Superbyte UI"></div>
+        Superbyte UI
+      </div>
+      <nav id="app-navigation" class="app-navigation">
+        <div class="side-group">
+          <div class="side-group-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><i data-lucide="layout-grid" class="sg-icon"></i> General <i data-lucide="chevron-down" class="sg-chev"></i></div>
+          <div class="side-submenu">
+            <a class="side-link" href="index.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+            <a class="side-link" href="create.html"><i data-lucide="plus"></i> Create</a>
+            <a class="side-link" href="analytics.html"><i data-lucide="chart-line"></i> Analytics</a>
+          </div>
+        </div>
+        <div class="side-group" data-layout-group="layout">
+          <div class="side-group-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><i data-lucide="layout-template" class="sg-icon"></i> Layout <i data-lucide="chevron-down" class="sg-chev"></i></div>
+          <div class="side-submenu">
+            <a class="side-link" data-layout-nav="1" data-layout-page="vertical" href="layout-vertical.html"><i data-lucide="panel-left"></i> Vertical</a>
+            <a class="side-link" data-layout-nav="1" data-layout-page="horizontal" href="layout-horizontal.html"><i data-lucide="panel-top"></i> Horizontal</a>
+            <a class="side-link" data-layout-nav="1" data-layout-page="mini-sidebar" href="layout-mini-sidebar.html"><i data-lucide="panel-right"></i> Mini Sidebar</a>
+            <a class="side-link" data-layout-nav="1" data-layout-page="vertical-boxed" href="layout-vertical-boxed.html"><i data-lucide="panel-left"></i> Vertical + Boxed</a>
+            <a class="side-link" data-layout-nav="1" data-layout-page="vertical-contained" href="layout-vertical-contained.html"><i data-lucide="panel-left"></i> Vertical + Contained</a>
+            <a class="side-link" data-layout-nav="1" data-layout-page="horizontal-boxed" href="layout-horizontal-boxed.html"><i data-lucide="panel-top"></i> Horizontal + Boxed</a>
+            <a class="side-link" data-layout-nav="1" data-layout-page="horizontal-contained" href="layout-horizontal-contained.html"><i data-lucide="panel-top"></i> Horizontal + Contained</a>
+            <a class="side-link" data-layout-nav="1" data-layout-page="mini-sidebar-boxed" href="layout-mini-sidebar-boxed.html"><i data-lucide="panel-right"></i> Mini Sidebar + Boxed</a>
+            <a class="side-link" data-layout-nav="1" data-layout-page="mini-sidebar-contained" href="layout-mini-sidebar-contained.html"><i data-lucide="panel-right"></i> Mini Sidebar + Contained</a>
+            <a class="side-link" href="layout-comfy.html"><i data-lucide="stretch-horizontal"></i> Comfy</a>
+            <a class="side-link" href="layout-condensed.html"><i data-lucide="shrink"></i> Condensed</a>
+            <a class="side-link" href="layouts.html"><i data-lucide="layout-grid"></i> All layouts</a>
+          </div>
+        </div>
+        <div class="side-group open">
+          <div class="side-group-toggle" role="button" tabindex="0" aria-expanded="true" aria-haspopup="true"><i data-lucide="hard-drive" class="sg-icon"></i> Data <i data-lucide="chevron-down" class="sg-chev"></i></div>
+          <div class="side-submenu">
+            <a class="side-link" href="records.html"><i data-lucide="table-2"></i> Records</a>
+            <a class="side-link active" href="users.html"><i data-lucide="users-round"></i> Users</a>
+            <a class="side-link" href="datatables.html"><i data-lucide="filter"></i> DataTables</a>
+          </div>
+        </div>
+        <div class="side-group">
+          <div class="side-group-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><i data-lucide="puzzle" class="sg-icon"></i> Components <i data-lucide="chevron-down" class="sg-chev"></i></div>
+          <div class="side-submenu">
+            <a class="side-link" href="forms.html"><i data-lucide="list-checks"></i> Forms</a>
+            <a class="side-link" href="elements.html"><i data-lucide="shapes"></i> Buttons &amp; Badges</a>
+            <a class="side-link" href="cards.html"><i data-lucide="credit-card"></i> Cards &amp; Alerts</a>
+            <a class="side-link" href="overlays.html"><i data-lucide="layers"></i> Modals &amp; Tabs</a>
+            <a class="side-link" href="utilities.html"><i data-lucide="sliders-horizontal"></i> Utilities</a>
+            <a class="side-link" href="components.html"><i data-lucide="boxes"></i> Components</a>
+            <a class="side-link" href="all-components.html"><i data-lucide="layout-grid"></i> All components</a>
+            <a class="side-link" href="icons.html"><i data-lucide="lucide"></i> Icons</a>
+          </div>
+        </div>
+        <div class="side-group">
+          <div class="side-group-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><i data-lucide="pie-chart" class="sg-icon"></i> Visuals <i data-lucide="chevron-down" class="sg-chev"></i></div>
+          <div class="side-submenu">
+            <a class="side-link" href="tables.html"><i data-lucide="table"></i> Tables</a>
+            <a class="side-link" href="charts.html"><i data-lucide="chart-column"></i> Charts</a>
+            <a class="side-link" href="visuals.html"><i data-lucide="wand-2"></i> Widgets</a>
+            <a class="side-link" href="maps.html"><i data-lucide="map-pin"></i> Maps</a>
+            <a class="side-link" href="echarts.html"><i data-lucide="bar-chart-3"></i> ECharts</a>
+            <a class="side-link" href="editors.html"><i data-lucide="code"></i> Editors</a>
+          </div>
+        </div>
+        <div class="side-group">
+          <div class="side-group-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><i data-lucide="grid-3x3" class="sg-icon"></i> Apps <i data-lucide="chevron-down" class="sg-chev"></i></div>
+          <div class="side-submenu">
+            <a class="side-link" href="crm.html"><i data-lucide="user-cog"></i> CRM</a>
+            <a class="side-link" href="ecommerce.html"><i data-lucide="store"></i> E-commerce</a>
+            <a class="side-link" href="calendar.html"><i data-lucide="calendar"></i> Calendar</a>
+            <a class="side-link" href="kanban.html"><i data-lucide="kanban"></i> Kanban</a>
+            <a class="side-link" href="email.html"><i data-lucide="mail"></i> Email</a>
+            <a class="side-link" href="file-manager.html"><i data-lucide="folder-open"></i> File manager</a>
+          </div>
+        </div>
+        <div class="side-group">
+          <div class="side-group-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><i data-lucide="file-text" class="sg-icon"></i> Pages <i data-lucide="chevron-down" class="sg-chev"></i></div>
+          <div class="side-submenu">
+            <a class="side-link" href="login.html"><i data-lucide="log-in"></i> Login</a>
+            <a class="side-link" href="register.html"><i data-lucide="user-plus"></i> Register</a>
+            <a class="side-link" href="forgot.html"><i data-lucide="key-round"></i> Forgot password</a>
+            <a class="side-link" href="reset.html"><i data-lucide="unlock"></i> Reset password</a>
+            <a class="side-link" href="lock.html"><i data-lucide="lock"></i> Lock screen</a>
+            <a class="side-link" href="verify.html"><i data-lucide="mail-check"></i> Verify email</a>
+            <a class="side-link" href="two-factor.html"><i data-lucide="shield-check"></i> Two-factor auth</a>
+            <a class="side-link" href="session-expired.html"><i data-lucide="clock"></i> Session expired</a>
+            <a class="side-link" href="rtl.html"><i data-lucide="arrow-left-right"></i> RTL preview</a>
+          </div>
+        </div>
+        <div class="side-group">
+          <div class="side-group-toggle" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><i data-lucide="book-open" class="sg-icon"></i> Docs <i data-lucide="chevron-down" class="sg-chev"></i></div>
+          <div class="side-submenu">
+            <a class="side-link" href="docs.html"><i data-lucide="book-open"></i> Docs</a>
+            <a class="side-link" href="components-docs.html"><i data-lucide="book-open-check"></i> Bootstrap Components Docs</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="app-user">
+        <div class="dropdown footer-user" id="footer-user">
+          <div class="avatar-btn" data-bs-toggle="dropdown" role="button" tabindex="0" aria-haspopup="true">
+            <div class="avatar-circle">JC</div>
+            <div class="who"><div class="n">John Canete</div><div class="r">Administrator</div></div>
+            <i data-lucide="chevron-up" class="footer-user-chev"></i>
+          </div>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i data-lucide="user"></i> Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i data-lucide="settings"></i> Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#" onclick="showToast('success','Signed out (demo)')"><i data-lucide="log-out"></i> Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div id="main">
+
+    <!-- TOOLBAR -->
+    <div id="toolbar">
+      <div class="app-container">
+        <button class="icon-btn app-nav-toggle" onclick="openAppNav()" aria-label="Toggle navigation"><i data-lucide="menu"></i></button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal"><i data-lucide="plus"></i> New</button>
+        <button class="btn btn-ghost" onclick="showToast('success','Data refreshed')" aria-label="Refresh data"><i data-lucide="refresh-cw"></i></button>
+        <div class="tb-sep"></div>
+        <nav class="breadcrumb-wrap" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">Superbyte UI</li>
+            <li class="breadcrumb-item active" aria-current="page">Users</li>
+          </ol>
+        </nav>
+        <div class="search-wrap">
+          <i data-lucide="search" class="search-icon"></i>
+          <input class="search-input" id="global-search" placeholder="Search…" autocomplete="off">
+        </div>
+        <div class="icon-btn" data-bs-toggle="offcanvas" data-bs-target="#themeCustomizer" title="Theme customizer" role="button" tabindex="0"><i data-lucide="paintbrush"></i></div>
+        <div class="dropdown">
+          <div class="icon-btn" data-bs-toggle="dropdown" role="button" tabindex="0" aria-label="Notifications"><i data-lucide="bell"></i><span class="ping">3</span></div>
+          <ul class="dropdown-menu dropdown-menu-end" style="width:300px">
+            <li class="dropdown-header">Notifications</li>
+            <li><a class="dropdown-item notif" href="#"><i data-lucide="circle-check" class="mt-1"></i><span><strong class="d-block" style="color:var(--text)">Backup completed</strong><small style="color:var(--text3)">2 minutes ago</small></span></a></li>
+            <li><a class="dropdown-item notif" href="#"><i data-lucide="user-plus" style="color:var(--accent-h)"></i><span><strong class="d-block" style="color:var(--text)">New user registered</strong><small style="color:var(--text3)">1 hour ago</small></span></a></li>
+            <li><a class="dropdown-item notif" href="#"><i data-lucide="alert-triangle" style="color:var(--yellow)"></i><span><strong class="d-block" style="color:var(--text)">Storage at 82%</strong><small style="color:var(--text3)">3 hours ago</small></span></a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-center" href="#" style="color:var(--accent-h)">View all</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <div class="avatar-btn" data-bs-toggle="dropdown" role="button" tabindex="0">
+            <div class="avatar-circle">JC</div>
+            <div class="who"><div class="n">John Canete</div><div class="r">Administrator</div></div>
+            <i data-lucide="chevron-down" style="font-size:9px;color:var(--text3)"></i>
+          </div>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i data-lucide="user"></i> Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i data-lucide="settings"></i> Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#" onclick="showToast('success','Signed out (demo)')"><i data-lucide="log-out"></i> Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div id="content">
+      <div class="app-container">
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Users</h1><p>team members · 6 active</p></div>
+    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#createModal" onclick="showToast('success','Invitation sent')"><i data-lucide="user-plus"></i> Invite user</button>
+  </div>
+
+  <div class="g-row cols-3" id="users-grid"></div>
+
+</section>
+
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="app-footer">
+      <div class="app-footer-inner app-container">
+        <div class="footer-meta"><span class="plan-tag"><span class="status-dot on"></span>v1.0.0</span><span class="footer-status"><span class="status-dot on"></span>System online · 99.9% uptime</span></div>
+        <div class="footer-storage"><div class="fs-label"><span>Storage</span><span>6.2 GB of 10 GB</span></div><div class="progress"><div class="progress-bar" style="width:62%"></div></div></div>
+        <div class="footer-links"><a href="docs.html">Docs</a><a href="#" onclick="showToast('success','Demo only')">Support</a><a href="#" onclick="showToast('success','Demo only')">Changelog</a></div>
+        <div class="footer-copy">© 2026 Superbyte UI</div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- ═══ CONTEXT MENU ══════════════════════════════════════════════════════ -->
+<div id="ctx-menu">
+  <div class="ctx-item" data-action="action"><i data-lucide="play"></i> Action</div>
+  <div class="ctx-item" data-action="edit"><i data-lucide="pencil"></i> Edit</div>
+  <div class="ctx-sep"></div>
+  <div class="ctx-item danger" data-action="remove"><i data-lucide="trash-2"></i> Remove</div>
+</div>
+
+<!-- ═══ MODALS ════════════════════════════════════════════════════════════ -->
+<div class="modal" id="createModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title"><span class="modal-icon"><i data-lucide="folder-plus"></i></span> New folder</div>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <label class="form-label" for="create-name">Folder name</label>
+          <input class="form-control" id="create-name" placeholder="new-folder" autofocus>
+        </div>
+        <div class="form-text mt-2">Folder names must be unique within the current directory.</div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-primary" data-bs-dismiss="modal" onclick="showToast('success','Folder created')">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="uploadModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title"><span class="modal-icon"><i data-lucide="cloud-upload"></i></span> Upload files</div>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="dropzone">
+          <i data-lucide="cloud-upload" class="d-block mx-auto mb-2 icon-sz-22"></i>
+          Drop files here or click to browse<br><small style="font-size:11px">Max 50 MB per file</small>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-primary" data-bs-dismiss="modal" onclick="showToast('success','Upload complete')">Upload</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="deleteModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title"><span class="modal-icon danger"><i data-lucide="alert-triangle"></i></span> Confirm delete</div>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body"><p style="color:var(--text2);font-size:13px;margin:0">This action cannot be undone. The item will be permanently removed.</p></div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-danger" data-bs-dismiss="modal" data-confirm onclick="showToast('success','Item deleted')">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ THEME CUSTOMIZER ══════════════════════════════════════════════════ -->
+<div class="offcanvas" tabindex="-1" id="themeCustomizer">
+  <div class="offcanvas-header">
+    <div class="offcanvas-title"><i data-lucide="paintbrush"></i> Theme customizer</div>
+    <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i data-lucide="x"></i></button>
+  </div>
+  <div class="offcanvas-body">
+
+    <div class="customizer-section">
+      <div class="customizer-label">Appearance</div>
+      <div class="appearance-grid">
+        <div class="appearance-opt active" id="opt-dark" onclick="setAppearance('dark')"><i data-lucide="moon"></i>Dark</div>
+        <div class="appearance-opt" id="opt-light" onclick="setAppearance('light')"><i data-lucide="sun"></i>Light</div>
+      </div>
+    </div>
+
+    <div class="customizer-section">
+      <div class="customizer-label">Accent color</div>
+      <div class="swatch-grid" id="swatch-grid"></div>
+    </div>
+
+    <div class="customizer-section">
+      <div class="customizer-label">Corner radius</div>
+      <div class="radius-grid">
+        <div class="radius-opt" id="radius-sharp" onclick="setRadius('4px','2px',this)">Sharp</div>
+        <div class="radius-opt" id="radius-default" onclick="setRadius('8px','4px',this)">Default</div>
+        <div class="radius-opt active" id="radius-round" onclick="setRadius('14px','8px',this)">Round</div>
+      </div>
+    </div>
+
+    <div class="customizer-section">
+      <div class="customizer-label">Layout density</div>
+      <div class="appearance-grid">
+        <div class="appearance-opt" id="opt-compact" onclick="setCompact(true)"><i data-lucide="move"></i>Compact</div>
+        <div class="appearance-opt active" id="opt-roomy" onclick="setCompact(false)"><i data-lucide="more-vertical"></i>Roomy</div>
+      </div>
+    </div>
+
+    <div class="customizer-section">
+      <div class="customizer-label">Content width</div>
+      <div class="appearance-grid">
+        <div class="appearance-opt" data-width-mode="fluid"><i data-lucide="maximize-2"></i>Fluid</div>
+        <div class="appearance-opt" data-width-mode="boxed"><i data-lucide="minimize-2"></i>Boxed</div>
+        <div class="appearance-opt" data-width-mode="contained"><i data-lucide="square"></i>Contained</div>
+      </div>
+    </div>
+
+    <div class="customizer-section">
+      <div class="customizer-label">Navigation</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
+        <div class="appearance-opt" data-layout-mode="vertical"><i data-lucide="panel-left"></i>Vertical</div>
+        <div class="appearance-opt" data-layout-mode="horizontal"><i data-lucide="panel-top"></i>Horizontal</div>
+        <div class="appearance-opt" data-layout-mode="mini-sidebar"><i data-lucide="panel-right"></i>Mini Sidebar</div>
+      </div>
+    </div>
+
+    <div class="customizer-section">
+      <div class="customizer-label">Base font size</div>
+      <input type="range" class="form-range" id="fs-range" min="13" max="17" value="14" oninput="setFontSize(this.value)">
+      <div class="d-flex justify-content-between" style="font-size:10.5px;color:var(--text3);margin-top:4px"><span>13</span><span id="fs-out">14px</span><span>17</span></div>
+    </div>
+
+    <div class="customizer-section mb-0">
+      <div class="customizer-label">Preview</div>
+      <div class="card p-3 d-flex flex-column gap-2">
+        <button class="btn btn-primary btn-sm">Primary button</button>
+        <span class="tag tag-indigo"><i data-lucide="circle"></i> Sample tag</span>
+        <div class="progress"><div class="progress-bar" style="width:65%"></div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script type="module" src="/src/js/pages/users.js"></script>
+<script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lock screen</title>
+<link rel="icon" href="/img/favicon-32.png"><link rel="icon" href="/img/favicon-192.png" sizes="192x192">
+<link rel="stylesheet" href="/src/styles/app.css">
+<script src="/pre-paint.js"></script>
+</head>
+<body>
+
+<div id="toast-container"></div>
+
+<div class="auth-page">
+  <div class="auth-card">
+
+    <div class="auth-logo">
+      <div class="logo-mark"><img src="/img/brand.png" alt="Superbyte UI"></div>
+      Superbyte UI
+      <span style="color:var(--text3);font-weight:400;font-size:11px">v1.0.0</span>
+    </div>
+
+    <button class="icon-btn auth-theme-btn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+      <span class="theme-icon-moon"><i data-lucide="moon"></i></span>
+      <span class="theme-icon-sun"><i data-lucide="sun"></i></span>
+    </button>
+
+<div class="auth-panel text-center">
+  <div class="d-flex justify-center mb-4">
+    <div class="avatar-circle" style="width:64px;height:64px;font-size:20px;margin:0">JC</div>
+  </div>
+  <h1>John Canete</h1>
+  <p class="sub">Session locked. Enter your password to continue.</p>
+
+  <form id="auth-form" novalidate>
+    <div class="mb-3">
+      <label class="form-label" for="lock-pass" style="text-align:start">Password</label>
+      <div class="input-group">
+        <input class="form-control" type="password" id="lock-pass" placeholder="Password" required autofocus>
+        <button class="input-group-text" type="button" data-toggle-pass="lock-pass" aria-label="Show password"><i data-lucide="eye"></i></button>
+      </div>
+    </div>
+    <button class="btn btn-primary w-100" type="submit"><i data-lucide="unlock"></i> Unlock</button>
+  </form>
+</div>
+
+<div class="auth-foot">Not you? <a href="login.html" style="color:var(--accent-h)">Switch account</a></div>
+
+
+    <div class="auth-legal">© 2026 Superbyte UI · <a href="#" onclick="showToast('success','Demo only')">Terms</a> · <a href="#" onclick="showToast('success','Demo only')">Privacy</a></div>
+
+  </div>
+</div>
+
+<script type="module" src="/src/js/pages/auth.js"></script>
+<script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

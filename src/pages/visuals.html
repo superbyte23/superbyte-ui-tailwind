@@ -1,0 +1,114 @@
+<!--
+title: Visuals
+crumb: Visuals
+script: visuals
+active: visuals
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Visuals</h1><p>pure-CSS widgets — progress, radial gauges, avatars and status signals</p></div>
+  </div>
+
+  <div class="g-row g-4 cols-4">
+    <div class="stat-card card">
+      <div class="top">
+        <div><div class="stat-card-value">82%</div><div class="stat-card-label">CPU utilization</div></div>
+        <div class="radial" style="--p:82;--c:var(--accent)"><span>82%</span></div>
+      </div>
+      <div class="stat-delta up"><i data-lucide="trending-up" style="width:13px;height:13px"></i> 3.1% vs last hour</div>
+    </div>
+    <div class="stat-card card">
+      <div class="top">
+        <div><div class="stat-card-value">1.4 TB</div><div class="stat-card-label">Storage used</div></div>
+        <div class="radial" style="--p:58;--c:var(--yellow)"><span>58%</span></div>
+      </div>
+      <div class="stat-delta down"><i data-lucide="trending-down" style="width:13px;height:13px"></i> 0.8% vs last hour</div>
+    </div>
+    <div class="stat-card card">
+      <div class="top">
+        <div><div class="stat-card-value">97.9%</div><div class="stat-card-label">Uptime (30d)</div></div>
+        <div class="radial" style="--p:98;--c:var(--green)"><span>98%</span></div>
+      </div>
+      <div class="stat-delta up"><i data-lucide="trending-up" style="width:13px;height:13px"></i> Healthy</div>
+    </div>
+    <div class="stat-card card">
+      <div class="top">
+        <div><div class="stat-card-value">12</div><div class="stat-card-label">Open incidents</div></div>
+        <div class="radial" style="--p:24;--c:var(--danger)"><span>24%</span></div>
+      </div>
+      <div class="stat-delta down"><i data-lucide="trending-down" style="width:13px;height:13px"></i> 2 new today</div>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-2 mt-4">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="gauge"></i> Gauges</div>
+        <div class="card-sub">conic-gradient</div>
+      </div>
+      <div class="card-body">
+        <div class="g-row g-3 cols-4" style="justify-items:center">
+          <div class="d-flex flex-column align-center gap-2"><div class="radial lg" style="--p:64;--c:var(--accent)"><span>64</span></div><span class="mono-sm">Memory</span></div>
+          <div class="d-flex flex-column align-center gap-2"><div class="radial lg" style="--p:38;--c:var(--sky,#38bdf8)"><span>38</span></div><span class="mono-sm">Cache</span></div>
+          <div class="d-flex flex-column align-center gap-2"><div class="radial lg" style="--p:91;--c:var(--green)"><span>91</span></div><span class="mono-sm">Disk</span></div>
+          <div class="d-flex flex-column align-center gap-2"><div class="radial lg" style="--p:17;--c:var(--danger)"><span>17</span></div><span class="mono-sm">Errors</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="users-round"></i> Teams</div>
+      </div>
+      <div class="card-body d-flex flex-column gap-4">
+        <div class="d-flex align-center gap-3">
+          <div class="avatar-stack">
+            <div class="avatar-circle" style="background:#2961fd">AL</div>
+            <div class="avatar-circle" style="background:#0ea5e9">JD</div>
+            <div class="avatar-circle" style="background:#10b981">MK</div>
+            <div class="avatar-circle" style="background:#f59e0b">+7</div>
+          </div>
+          <div class="flex-1">
+            <div style="font-size:13px;font-weight:700;color:var(--text)">Design</div>
+            <div style="font-size:11.5px;color:var(--text3)">10 members · 4 online</div>
+          </div>
+          <span class="status-dot on"></span>
+        </div>
+        <div class="d-flex align-center gap-3">
+          <div class="avatar-stack">
+            <div class="avatar-circle" style="background:#ef4444">SR</div>
+            <div class="avatar-circle" style="background:#8b5cf6">OF</div>
+          </div>
+          <div class="flex-1">
+            <div style="font-size:13px;font-weight:700;color:var(--text)">Platform</div>
+            <div style="font-size:11.5px;color:var(--text3)">6 members · 1 online</div>
+          </div>
+          <span class="status-dot warn"></span>
+        </div>
+        <div class="d-flex align-center gap-3">
+          <div class="avatar-stack">
+            <div class="avatar-circle" style="background:#14b8a6">PS</div>
+            <div class="avatar-circle" style="background:#f43f5e">LF</div>
+            <div class="avatar-circle" style="background:#3b82f6">TB</div>
+          </div>
+          <div class="flex-1">
+            <div style="font-size:13px;font-weight:700;color:var(--text)">Growth</div>
+            <div style="font-size:11.5px;color:var(--text3)">9 members · 0 online</div>
+          </div>
+          <span class="status-dot off"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header">
+      <div class="card-title"><i data-lucide="activity"></i> Activity</div>
+      <div class="card-sub">sparkline (Chart.js)</div>
+    </div>
+    <div class="card-body"><div class="chart-wrap" style="height:240px"><canvas id="spark-canvas"></canvas></div></div>
+  </div>
+
+</section>

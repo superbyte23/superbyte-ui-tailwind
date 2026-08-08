@@ -1,0 +1,216 @@
+<!--
+title: Components
+crumb: Components
+active: components
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Components</h1><p>the full component gallery — every building block ships in <code>app.css</code></p></div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="table-toolbar">
+      <div class="d-flex flex-wrap gap-2">
+        <a class="nav-link" href="#c-buttons">Buttons</a>
+        <a class="nav-link" href="#c-badges">Badges</a>
+        <a class="nav-link" href="#c-cards">Cards</a>
+        <a class="nav-link" href="#c-forms">Forms</a>
+        <a class="nav-link" href="#c-tables">Tables</a>
+        <a class="nav-link" href="#c-alerts">Alerts</a>
+        <a class="nav-link" href="#c-tabs">Tabs</a>
+        <a class="nav-link" href="#c-progress">Progress</a>
+        <a class="nav-link" href="#c-overlays">Overlays</a>
+        <a class="nav-link" href="#c-pagination">Pagination</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-2">
+    <div class="card" id="c-buttons">
+      <div class="card-header"><div class="card-title"><i data-lucide="mouse-pointer-click"></i> Buttons</div></div>
+      <div class="card-body d-flex flex-column gap-3">
+        <div class="d-flex flex-wrap gap-2">
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-ghost">Ghost</button>
+          <button type="button" class="btn btn-outline-secondary">Outline</button>
+          <button type="button" class="btn btn-danger">Danger</button>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <button type="button" class="btn btn-sm btn-primary">Small</button>
+          <button type="button" class="btn btn-primary">Default</button>
+          <button type="button" class="btn btn-lg btn-primary">Large</button>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <button type="button" class="btn btn-primary" disabled>Disabled</button>
+          <button type="button" class="btn btn-primary btn-block">Block</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="c-badges">
+      <div class="card-header"><div class="card-title"><i data-lucide="tags"></i> Badges & tags</div></div>
+      <div class="card-body d-flex flex-column gap-3">
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge text-bg-primary">Primary</span>
+          <span class="badge text-bg-secondary">Secondary</span>
+          <span class="badge">Default</span>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="tag tag-indigo">indigo</span>
+          <span class="tag tag-amber">amber</span>
+          <span class="tag tag-sky">sky</span>
+          <span class="tag tag-green">green</span>
+          <span class="tag tag-pink">pink</span>
+          <span class="tag tag-red">red</span>
+          <span class="tag tag-slate">slate</span>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="tag-chip">React <span class="x"><i data-lucide="x" style="width:11px;height:11px"></i></span></span>
+          <span class="tag-chip">Vue <span class="x"><i data-lucide="x" style="width:11px;height:11px"></i></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="c-forms">
+      <div class="card-header"><div class="card-title"><i data-lucide="keyboard"></i> Forms</div></div>
+      <div class="card-body d-flex flex-column gap-3">
+        <input type="text" class="form-control" placeholder="Form control">
+        <div class="input-group">
+          <span class="input-group-text"><i data-lucide="at-sign" style="width:14px;height:14px"></i></span>
+          <input type="text" class="form-control" placeholder="Input group">
+        </div>
+        <select class="form-select"><option>Form select</option><option>Option two</option></select>
+        <input type="text" class="form-control" value="Readonly" readonly>
+        <div class="d-flex flex-wrap gap-3">
+          <label class="form-check"><input type="checkbox" class="form-check-input" checked><span class="form-check-label">Check</span></label>
+          <label class="form-check form-switch"><input type="checkbox" class="form-check-input" checked><span class="form-check-label">Switch</span></label>
+        </div>
+        <input type="range" class="form-range">
+      </div>
+    </div>
+
+    <div class="card" id="c-alerts">
+      <div class="card-header"><div class="card-title"><i data-lucide="bell-ring"></i> Alerts</div></div>
+      <div class="card-body d-flex flex-column gap-2">
+        <div class="alert alert-primary"><b class="alert-heading">Primary</b> — accent-tinted notice.</div>
+        <div class="alert alert-success"><b class="alert-heading">Success</b> — it worked.</div>
+        <div class="alert alert-warning"><b class="alert-heading">Warning</b> — heads up.</div>
+        <div class="alert alert-danger"><b class="alert-heading">Danger</b> — something broke.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-2 mt-4">
+    <div class="card" id="c-cards">
+      <div class="card-header"><div class="card-title"><i data-lucide="credit-card"></i> Cards</div></div>
+      <div class="card-body d-flex flex-column gap-3">
+        <div class="card" style="box-shadow:none;border:1px dashed var(--border2)">
+          <div class="card-header"><div class="card-title">Nested card</div></div>
+          <div class="card-body" style="font-size:13px;color:var(--text2)">Cards nest freely — this one sits inside the gallery card with a dashed border.</div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <div class="stat-card card" style="flex:1;min-width:150px">
+            <div class="top"><div class="stat-icon"><i data-lucide="users"></i></div></div>
+            <div class="value">1,248</div>
+            <div class="label">Total users</div>
+          </div>
+          <div class="stat-card card" style="flex:1;min-width:150px">
+            <div class="top"><div class="stat-icon"><i data-lucide="circle-dollar-sign"></i></div></div>
+            <div class="value">$48k</div>
+            <div class="label">MRR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="c-tabs">
+      <div class="card-header"><div class="card-title"><i data-lucide="folder-tab"></i> Tabs</div></div>
+      <div class="card-body">
+        <div class="nav-tabs">
+          <button type="button" class="nav-link active" data-tab>Overview</button>
+          <button type="button" class="nav-link" data-tab>Analytics</button>
+          <button type="button" class="nav-link" data-tab>Settings</button>
+        </div>
+        <p style="font-size:13px;color:var(--text2);margin-top:16px">Click tabs to toggle the active state — cosmetic here, <code>[data-tab]</code> is wired globally.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-2 mt-4">
+    <div class="card" id="c-progress">
+      <div class="card-header"><div class="card-title"><i data-lucide="chart-line"></i> Progress</div></div>
+      <div class="card-body d-flex flex-column gap-3">
+        <div class="progress"><div class="progress-bar" style="width:72%"></div></div>
+        <div class="progress"><div class="progress-bar" style="width:45%;background:var(--green)"></div></div>
+        <div class="progress"><div class="progress-bar" style="width:30%;background:var(--yellow)"></div></div>
+        <div class="progress"><div class="progress-bar" style="width:18%;background:var(--danger)"></div></div>
+      </div>
+    </div>
+
+    <div class="card" id="c-overlays">
+      <div class="card-header"><div class="card-title"><i data-lucide="layout-grid"></i> Overlays</div></div>
+      <div class="card-body d-flex flex-wrap gap-2">
+        <button type="button" class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#c-modal"><i data-lucide="square-dashed-bottom"></i> Modal</button>
+        <div class="dropdown">
+          <button type="button" class="btn btn-ghost" data-bs-toggle="dropdown"><i data-lucide="chevron-down"></i> Dropdown</button>
+          <div class="dropdown-menu dropdown-menu-end">
+            <a class="dropdown-item" href="#"><i data-lucide="user"></i> Profile</a>
+            <a class="dropdown-item" href="#"><i data-lucide="settings"></i> Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-danger" href="#"><i data-lucide="log-out"></i> Sign out</a>
+          </div>
+        </div>
+        <button type="button" class="btn btn-ghost" data-bs-toggle="tooltip" data-bs-title="Tooltip on hover"><i data-lucide="message-circle-more"></i> Tooltip</button>
+        <button type="button" class="btn btn-ghost" data-ctx data-name="a component"><i data-lucide="mouse-pointer-click"></i> Right-click</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4" id="c-tables">
+    <div class="card-header"><div class="card-title"><i data-lucide="table"></i> Tables</div></div>
+    <table class="data-table">
+      <thead><tr><th>Project</th><th>Owner</th><th>Status</th><th>Progress</th></tr></thead>
+      <tbody>
+        <tr><td class="name-cell">Theme lab</td><td class="mono-cell">AL</td><td><span class="tag tag-green">Done</span></td><td><div class="progress" style="width:140px"><div class="progress-bar" style="width:100%"></div></div></td></tr>
+        <tr><td class="name-cell">Datatable widget</td><td class="mono-cell">JD</td><td><span class="tag tag-sky">Doing</span></td><td><div class="progress" style="width:140px"><div class="progress-bar" style="width:64%;background:var(--sky)"></div></div></td></tr>
+        <tr><td class="name-cell">Landing rewrite</td><td class="mono-cell">MK</td><td><span class="tag tag-amber">Todo</span></td><td><div class="progress" style="width:140px"><div class="progress-bar" style="width:32%;background:var(--yellow)"></div></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card mt-4" id="c-pagination">
+    <div class="card-header"><div class="card-title"><i data-lucide="menu"></i> Pagination</div></div>
+    <div class="card-body d-flex justify-between align-center gap-3 flex-wrap">
+      <span class="mono-sm">Page 2 of 8</span>
+      <ul class="pagination">
+        <li class="page-item"><button type="button" class="page-link"><i data-lucide="chevron-left" style="width:14px;height:14px"></i></button></li>
+        <li class="page-item"><button type="button" class="page-link">1</button></li>
+        <li class="page-item active"><button type="button" class="page-link">2</button></li>
+        <li class="page-item"><button type="button" class="page-link">3</button></li>
+        <li class="page-item"><button type="button" class="page-link">…</button></li>
+        <li class="page-item"><button type="button" class="page-link">8</button></li>
+        <li class="page-item"><button type="button" class="page-link"><i data-lucide="chevron-right" style="width:14px;height:14px"></i></button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- inline modal for the overlays demo -->
+  <div class="modal" id="c-modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title"><div class="modal-icon"><i data-lucide="rocket"></i></div> Component modal</div>
+          <button type="button" class="icon-btn" data-bs-dismiss="modal" aria-label="Close"><i data-lucide="x"></i></button>
+        </div>
+        <div class="modal-body" style="font-size:13px;color:var(--text2)">Modals are pure CSS + a small bootstrapper — no framework needed.</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

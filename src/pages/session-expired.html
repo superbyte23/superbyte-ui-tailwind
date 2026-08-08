@@ -1,0 +1,22 @@
+<!--
+title: Session expired
+layout: auth
+script: auth
+active: session-expired
+-->
+
+<div class="auth-panel">
+  <div class="auth-shield warn"><i data-lucide="history"></i></div>
+  <h1>Session expired</h1>
+  <p class="sub">Your session timed out after 15 minutes of inactivity.</p>
+
+  <div class="text-center mb-4">
+    <div style="font-size:13px;color:var(--text2);line-height:1.7">Your work is safe — just sign back in to continue.<br>Unsaved changes were kept locally.</div>
+  </div>
+  <div class="d-flex flex-column gap-2">
+    <button class="btn btn-primary" type="button" onclick="location.href='login.html'"><i data-lucide="log-in"></i> Sign in again</button>
+    <button class="btn btn-ghost" type="button" onclick="location.href='index.html'">Go to dashboard</button>
+  </div>
+</div>
+
+<div class="auth-foot"></div>

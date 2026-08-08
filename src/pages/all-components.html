@@ -1,0 +1,259 @@
+<!--
+title: All Components
+crumb: All Components
+active: all-components
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>All Components</h1><p>the entire catalog on one page — the design-system index</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title"><i data-lucide="mouse-pointer-click"></i> Buttons & icon buttons</div></div>
+    <div class="card-body d-flex flex-column gap-3">
+      <div class="d-flex flex-wrap gap-2">
+        <button type="button" class="btn btn-primary"><i data-lucide="plus"></i> Primary</button>
+        <button type="button" class="btn btn-ghost">Ghost</button>
+        <button type="button" class="btn btn-outline-secondary">Outline</button>
+        <button type="button" class="btn btn-danger"><i data-lucide="trash-2"></i> Danger</button>
+        <button type="button" class="btn btn-primary" disabled>Disabled</button>
+      </div>
+      <div class="d-flex flex-wrap gap-2">
+        <button type="button" class="btn btn-lg btn-primary">Large</button>
+        <button type="button" class="btn btn-sm btn-ghost"><i data-lucide="download"></i> Small</button>
+        <button type="button" class="btn btn-sm btn-primary btn-block" style="width:auto">Block (full width below)</button>
+      </div>
+      <button type="button" class="btn btn-primary btn-block">Full-width block button</button>
+      <div class="d-flex flex-wrap gap-2">
+        <button type="button" class="icon-btn"><i data-lucide="settings"></i></button>
+        <button type="button" class="icon-btn"><i data-lucide="bell"></i><span class="ping">3</span></button>
+        <button type="button" class="icon-btn"><i data-lucide="search"></i></button>
+        <button type="button" class="icon-btn"><i data-lucide="more-vertical"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-2 mt-4">
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="tags"></i> Badges, tags & chips</div></div>
+      <div class="card-body d-flex flex-column gap-3">
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge text-bg-primary">Primary</span>
+          <span class="badge text-bg-secondary">Secondary</span>
+          <span class="badge">Default</span>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="tag tag-indigo"><i data-lucide="circle"></i> indigo</span>
+          <span class="tag tag-amber"><i data-lucide="circle"></i> amber</span>
+          <span class="tag tag-sky"><i data-lucide="circle"></i> sky</span>
+          <span class="tag tag-green"><i data-lucide="circle"></i> green</span>
+          <span class="tag tag-pink"><i data-lucide="circle"></i> pink</span>
+          <span class="tag tag-red"><i data-lucide="circle"></i> red</span>
+          <span class="tag tag-slate"><i data-lucide="circle"></i> slate</span>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="tag-chip">Angular <span class="x"><i data-lucide="x" style="width:11px;height:11px"></i></span></span>
+          <span class="tag-chip">Svelte <span class="x"><i data-lucide="x" style="width:11px;height:11px"></i></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="info"></i> Alerts</div></div>
+      <div class="card-body d-flex flex-column gap-2">
+        <div class="alert alert-primary"><b class="alert-heading">Primary</b> — Accent-tinted notice with a heading.</div>
+        <div class="alert alert-success"><b class="alert-heading">Success</b> — Everything is fine.</div>
+        <div class="alert alert-warning"><b class="alert-heading">Warning</b> — Watch this metric.</div>
+        <div class="alert alert-danger"><b class="alert-heading">Danger</b> — Something failed.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-2 mt-4">
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="keyboard"></i> Inputs</div></div>
+      <div class="card-body d-flex flex-column gap-3">
+        <input type="text" class="form-control" placeholder="Text input">
+        <input type="text" class="form-control is-invalid" value="bad value">
+        <select class="form-select"><option>Select input</option><option>Two</option></select>
+        <div class="input-group">
+          <span class="input-group-text">$</span>
+          <input type="text" class="form-control" placeholder="Amount">
+          <span class="input-group-text">.00</span>
+        </div>
+        <div class="input-group">
+          <button type="button" class="btn btn-ghost" style="border-radius:var(--radius-sm) 0 0 var(--radius-sm)">Copy</button>
+          <input type="text" class="form-control" value="npx superbyte --preset '…'">
+        </div>
+        <input type="text" class="form-control" placeholder="Readonly" readonly>
+        <input type="text" class="form-control" placeholder="Disabled" disabled>
+        <textarea class="form-control" rows="2" placeholder="Textarea"></textarea>
+        <input type="range" class="form-range">
+        <input type="file" class="form-control">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="list-checks"></i> Checks, radios & switches</div></div>
+      <div class="card-body d-flex flex-column gap-4">
+        <div class="d-flex flex-column gap-2">
+          <label class="form-check"><input type="checkbox" class="form-check-input" checked><span class="form-check-label">Checked</span></label>
+          <label class="form-check"><input type="checkbox" class="form-check-input"><span class="form-check-label">Unchecked</span></label>
+          <label class="form-check"><input type="checkbox" class="form-check-input" disabled><span class="form-check-label">Disabled</span></label>
+        </div>
+        <div class="d-flex flex-column gap-2">
+          <label class="form-check"><input type="radio" class="form-check-input" name="ac-r" checked><span class="form-check-label">Option A</span></label>
+          <label class="form-check"><input type="radio" class="form-check-input" name="ac-r"><span class="form-check-label">Option B</span></label>
+        </div>
+        <div class="d-flex flex-column gap-2">
+          <label class="form-check form-switch"><input type="checkbox" class="form-check-input" checked><span class="form-check-label">Switch on</span></label>
+          <label class="form-check form-switch"><input type="checkbox" class="form-check-input"><span class="form-check-label">Switch off</span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-2 mt-4">
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="users"></i> Avatars & status</div></div>
+      <div class="card-body d-flex flex-wrap align-center gap-4">
+        <div class="avatar-circle" style="width:44px;height:44px;font-size:15px;border-radius:50%">AL</div>
+        <div class="avatar-circle" style="width:36px;height:36px;font-size:13px">JD</div>
+        <div class="avatar-circle">MK</div>
+        <div class="avatar-stack">
+          <div class="avatar-circle" style="background:#2961fd">AL</div>
+          <div class="avatar-circle" style="background:#0ea5e9">JD</div>
+          <div class="avatar-circle" style="background:#10b981">MK</div>
+          <div class="avatar-circle" style="background:#f59e0b">+4</div>
+        </div>
+        <div class="d-flex flex-column gap-2">
+          <span class="d-inline-flex align-center" style="font-size:12px;color:var(--text2)"><span class="status-dot on"></span> Online</span>
+          <span class="d-inline-flex align-center" style="font-size:12px;color:var(--text2)"><span class="status-dot warn"></span> Away</span>
+          <span class="d-inline-flex align-center" style="font-size:12px;color:var(--text2)"><span class="status-dot off"></span> Offline</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="gauge"></i> Progress & meters</div></div>
+      <div class="card-body d-flex flex-column gap-3">
+        <div class="progress"><div class="progress-bar" style="width:100%"></div></div>
+        <div class="progress"><div class="progress-bar" style="width:72%;background:var(--green)"></div></div>
+        <div class="progress"><div class="progress-bar" style="width:45%;background:var(--yellow)"></div></div>
+        <div class="progress"><div class="progress-bar" style="width:22%;background:var(--danger)"></div></div>
+        <div class="d-flex gap-2">
+          <div class="radial" style="--p:66;--c:var(--accent)"><span>66</span></div>
+          <div class="radial" style="--p:88;--c:var(--green)"><span>88</span></div>
+          <div class="radial" style="--p:34;--c:var(--yellow)"><span>34</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-2 mt-4">
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="list"></i> List groups</div></div>
+      <div class="list-group list-group-flush">
+        <div class="list-group-item"><i data-lucide="check-circle-2" style="width:15px;height:15px;color:var(--green)"></i> Design system shipped</div>
+        <div class="list-group-item"><i data-lucide="clock" style="width:15px;height:15px;color:var(--yellow)"></i> 48 pages migrated</div>
+        <div class="list-group-item active">Active list item</div>
+        <div class="list-group-item">Plain list item</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="scan"></i> Dropzone & empty state</div></div>
+      <div class="card-body d-flex flex-column gap-4">
+        <div class="dropzone"><i data-lucide="upload-cloud" style="width:26px;height:26px;margin-bottom:8px"></i><div>Drag &amp; drop files here, or <b style="color:var(--accent-h)">browse</b></div><div style="font-size:11.5px;margin-top:4px">Any file type · up to 10 MB</div></div>
+        <div class="empty-state" style="padding:26px"><i data-lucide="package-open" style="width:30px;height:30px"></i><p>No results found for this filter.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header"><div class="card-title"><i data-lucide="table"></i> Table variants</div></div>
+    <div class="card-body d-flex flex-column gap-4">
+      <table class="table table-striped table-hover">
+        <thead><tr><th>Framework</th><th>Type</th><th>Bundle</th></tr></thead>
+        <tbody>
+          <tr><td class="name-cell">React</td><td>Library</td><td class="mono-cell">48 kB</td></tr>
+          <tr><td class="name-cell">Vue</td><td>Framework</td><td class="mono-cell">34 kB</td></tr>
+          <tr><td class="name-cell">Svelte</td><td>Compiler</td><td class="mono-cell">12 kB</td></tr>
+          <tr><td class="name-cell">Lit</td><td>Library</td><td class="mono-cell">5 kB</td></tr>
+        </tbody>
+      </table>
+      <div class="table-sticky-wrap table-zone" style="max-height:220px">
+        <table class="table table-sticky-col">
+          <thead><tr><th>ID</th><th>Name</th><th>Region</th><th>Plan</th></tr></thead>
+          <tbody>
+            <tr><td class="mono-cell">#1</td><td class="name-cell">Ada Lovelace</td><td>EMEA</td><td class="mono-cell">Pro</td></tr>
+            <tr><td class="mono-cell">#2</td><td class="name-cell">Jonas Dahl</td><td>EMEA</td><td class="mono-cell">Team</td></tr>
+            <tr><td class="mono-cell">#3</td><td class="name-cell">Mina Kato</td><td>APAC</td><td class="mono-cell">Pro</td></tr>
+            <tr><td class="mono-cell">#4</td><td class="name-cell">Sara Chen</td><td>AMER</td><td class="mono-cell">Enterprise</td></tr>
+            <tr><td class="mono-cell">#5</td><td class="name-cell">Omar Farouk</td><td>EMEA</td><td class="mono-cell">Team</td></tr>
+            <tr><td class="mono-cell">#6</td><td class="name-cell">Priya Sharma</td><td>APAC</td><td class="mono-cell">Pro</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="d-flex justify-between align-center flex-wrap gap-3">
+        <span class="mono-sm">Showing 1–6 of 6</span>
+        <ul class="pagination">
+          <li class="page-item disabled"><button type="button" class="page-link"><i data-lucide="chevron-left" style="width:14px;height:14px"></i></button></li>
+          <li class="page-item active"><button type="button" class="page-link">1</button></li>
+          <li class="page-item"><button type="button" class="page-link">2</button></li>
+          <li class="page-item"><button type="button" class="page-link">3</button></li>
+          <li class="page-item"><button type="button" class="page-link"><i data-lucide="chevron-right" style="width:14px;height:14px"></i></button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-2 mt-4">
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="type"></i> Inline elements</div></div>
+      <div class="card-body d-flex flex-column gap-3" style="font-size:13px;color:var(--text2);line-height:1.8">
+        <div><mark>Mark</mark> · <del>del</del> · <u>underline</u> · <small>small</small> · <strong>strong</strong> · <em>emphasis</em></div>
+        <div>Inline <code>code</code>, variable <var>var</var>, keyboard <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">K</kbd>, and <abbr title="Application Programming Interface">API</abbr>.</div>
+        <blockquote style="border-inline-start:3px solid var(--accent);padding:2px 14px;color:var(--text2);font-style:italic">"Less, but better."</blockquote>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div class="card-title"><i data-lucide="layout-grid"></i> Overlays</div></div>
+      <div class="card-body d-flex flex-wrap gap-2">
+        <button type="button" class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#ac-modal"><i data-lucide="square-dashed-bottom"></i> Modal</button>
+        <div class="dropdown">
+          <button type="button" class="btn btn-ghost" data-bs-toggle="dropdown"><i data-lucide="chevron-down"></i> Dropdown</button>
+          <div class="dropdown-menu dropdown-menu-end">
+            <div class="dropdown-header">Actions</div>
+            <a class="dropdown-item" href="#"><i data-lucide="pencil"></i> Edit</a>
+            <a class="dropdown-item" href="#"><i data-lucide="copy"></i> Duplicate</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-danger" href="#"><i data-lucide="trash-2"></i> Delete</a>
+          </div>
+        </div>
+        <button type="button" class="btn btn-ghost" data-bs-toggle="tooltip" data-bs-title="A tooltip"><i data-lucide="message-circle-more"></i> Tooltip</button>
+        <button type="button" class="btn btn-ghost" data-ctx data-name="an item"><i data-lucide="mouse-pointer-click"></i> Context</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="ac-modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title"><div class="modal-icon"><i data-lucide="sparkles"></i></div> Everything modal</div>
+          <button type="button" class="icon-btn" data-bs-dismiss="modal" aria-label="Close"><i data-lucide="x"></i></button>
+        </div>
+        <div class="modal-body" style="font-size:13px;color:var(--text2)">The same modal primitive powers dialogs, confirms and the large forms — sizes via <code>.modal-sm</code>, <code>.modal-lg</code>, <code>.modal-xl</code>.</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

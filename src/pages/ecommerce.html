@@ -1,0 +1,132 @@
+<!--
+title: Ecommerce
+crumb: Ecommerce
+active: ecommerce
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Ecommerce</h1><p>storefront metrics, orders and top products</p></div>
+  </div>
+
+  <div class="g-row g-4 cols-4">
+    <div class="stat-card card">
+      <div class="top">
+        <div class="stat-icon"><i data-lucide="shopping-bag"></i></div>
+        <div class="stat-delta up"><i data-lucide="trending-up" style="width:13px;height:13px"></i> 14.6%</div>
+      </div>
+      <div class="value">$128.4k</div>
+      <div class="label">Revenue · this month</div>
+    </div>
+    <div class="stat-card card">
+      <div class="top">
+        <div class="stat-icon"><i data-lucide="receipt"></i></div>
+        <div class="stat-delta up"><i data-lucide="trending-up" style="width:13px;height:13px"></i> 6.1%</div>
+      </div>
+      <div class="value">3,208</div>
+      <div class="label">Orders</div>
+    </div>
+    <div class="stat-card card">
+      <div class="top">
+        <div class="stat-icon"><i data-lucide="users"></i></div>
+        <div class="stat-delta up"><i data-lucide="trending-up" style="width:13px;height:13px"></i> 9.3%</div>
+      </div>
+      <div class="value">1,942</div>
+      <div class="label">Customers</div>
+    </div>
+    <div class="stat-card card">
+      <div class="top">
+        <div class="stat-icon"><i data-lucide="shopping-cart"></i></div>
+        <div class="stat-delta down"><i data-lucide="trending-down" style="width:13px;height:13px"></i> 0.8%</div>
+      </div>
+      <div class="value">$64.20</div>
+      <div class="label">Avg. order value</div>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-2 mt-4">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="package"></i> Top products</div>
+      </div>
+      <div class="list-group list-group-flush">
+        <div class="list-group-item d-flex align-center gap-3">
+          <div class="prod-thumb"><i data-lucide="shirt"></i></div>
+          <div class="flex-1">
+            <div style="font-size:13px;font-weight:600;color:var(--text)">Hoodie — Charcoal</div>
+            <div style="font-size:11.5px;color:var(--text3)">2,146 sold · $54.00</div>
+          </div>
+          <span class="tag tag-green"><i data-lucide="trending-up" style="width:11px;height:11px"></i> 21%</span>
+        </div>
+        <div class="list-group-item d-flex align-center gap-3">
+          <div class="prod-thumb"><i data-lucide="watch"></i></div>
+          <div class="flex-1">
+            <div style="font-size:13px;font-weight:600;color:var(--text)">Chrono Watch</div>
+            <div style="font-size:11.5px;color:var(--text3)">1,024 sold · $129.00</div>
+          </div>
+          <span class="tag tag-green"><i data-lucide="trending-up" style="width:11px;height:11px"></i> 12%</span>
+        </div>
+        <div class="list-group-item d-flex align-center gap-3">
+          <div class="prod-thumb"><i data-lucide="headphones"></i></div>
+          <div class="flex-1">
+            <div style="font-size:13px;font-weight:600;color:var(--text)">Studio Headphones</div>
+            <div style="font-size:11.5px;color:var(--text3)">988 sold · $89.00</div>
+          </div>
+          <span class="tag tag-red"><i data-lucide="trending-down" style="width:11px;height:11px"></i> 4%</span>
+        </div>
+        <div class="list-group-item d-flex align-center gap-3">
+          <div class="prod-thumb"><i data-lucide="coffee"></i></div>
+          <div class="flex-1">
+            <div style="font-size:13px;font-weight:600;color:var(--text)">Mug — Matte Black</div>
+            <div style="font-size:11.5px;color:var(--text3)">762 sold · $24.00</div>
+          </div>
+          <span class="tag tag-amber">flat</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="credit-card"></i> Payment methods</div>
+      </div>
+      <div class="card-body d-flex flex-column gap-4">
+        <div>
+          <div class="d-flex justify-between mb-1"><span style="font-size:12.5px;color:var(--text2)">Card</span><span class="tag tag-slate">54%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:54%"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-1"><span style="font-size:12.5px;color:var(--text2)">PayPal</span><span class="tag tag-sky">26%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:26%;background:var(--sky)"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-1"><span style="font-size:12.5px;color:var(--text2)">Apple Pay</span><span class="tag tag-slate">12%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:12%;background:var(--text3)"></div></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between mb-1"><span style="font-size:12.5px;color:var(--text2)">Crypto</span><span class="tag tag-amber">8%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:8%;background:var(--yellow)"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header">
+      <div class="card-title"><i data-lucide="list-ordered"></i> Recent orders</div>
+      <button type="button" class="btn btn-sm btn-ghost"><i data-lucide="download"></i> Export</button>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="mono-cell">#ORD-2041</td><td class="name-cell">Ada Lovelace</td><td class="mono-cell">1</td><td class="mono-cell">$29.00</td><td><span class="tag tag-green">Paid</span></td></tr>
+        <tr><td class="mono-cell">#ORD-2040</td><td class="name-cell">Jonas Dahl</td><td class="mono-cell">5</td><td class="mono-cell">$149.00</td><td><span class="tag tag-green">Paid</span></td></tr>
+        <tr><td class="mono-cell">#ORD-2039</td><td class="name-cell">Mina Kato</td><td class="mono-cell">3</td><td class="mono-cell">$19.00</td><td><span class="tag tag-amber">Pending</span></td></tr>
+        <tr><td class="mono-cell">#ORD-2037</td><td class="name-cell">Omar Farouk</td><td class="mono-cell">2</td><td class="mono-cell">$58.00</td><td><span class="tag tag-sky">Refunded</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>

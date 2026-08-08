@@ -1,0 +1,186 @@
+<!--
+title: Overlays
+crumb: Overlays
+script: overlays
+active: overlays
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Overlays</h1><p>modals, dropdowns, offcanvas, tooltips and the right-click menu</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title"><i data-lucide="layout-grid"></i> Launch triggers</div>
+    </div>
+    <div class="card-body">
+      <div class="d-flex flex-wrap align-center gap-2">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ov-modal"><i data-lucide="square-dashed-bottom"></i> Open modal</button>
+        <button type="button" class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#ov-modal-sm"><i data-lucide="shrink"></i> Small modal</button>
+        <button type="button" class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#ov-modal-lg"><i data-lucide="expand"></i> Large modal</button>
+        <button type="button" class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#ov-modal-xl"><i data-lucide="maximize"></i> Extra large</button>
+        <button type="button" class="btn btn-ghost" data-bs-toggle="offcanvas" data-bs-target="#ov-canvas"><i data-lucide="panel-right-close"></i> Offcanvas</button>
+      </div>
+      <div class="d-flex flex-wrap align-center gap-2 mt-3">
+        <div class="dropdown">
+          <button type="button" class="btn btn-ghost" data-bs-toggle="dropdown"><i data-lucide="chevron-down"></i> Dropdown</button>
+          <div class="dropdown-menu dropdown-menu-end">
+            <div class="dropdown-header">Account</div>
+            <a class="dropdown-item" href="#"><i data-lucide="user"></i> Profile</a>
+            <a class="dropdown-item" href="#"><i data-lucide="settings"></i> Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-danger" href="#"><i data-lucide="log-out"></i> Sign out</a>
+          </div>
+        </div>
+        <button type="button" class="btn btn-ghost" data-bs-toggle="tooltip" data-bs-title="I'm a tooltip — hover me"><i data-lucide="message-circle-more"></i> Tooltip</button>
+        <button type="button" class="btn btn-ghost" data-bs-toggle="tooltip" data-bs-title="Top-positioned"><i data-lucide="info"></i> Another tooltip</button>
+        <button type="button" class="btn btn-ghost" data-ctx data-name="a file"><i data-lucide="mouse-pointer-click"></i> Right-click me</button>
+      </div>
+      <p class="form-text mt-3" style="margin-top:14px">Context menus are wired to any element with <code>data-ctx</code> — right-click anywhere on this row.</p>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-3 mt-4">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="info"></i> Modal anatomy</div>
+      </div>
+      <div class="card-body" style="font-size:13px;color:var(--text2);line-height:1.65">
+        Modals use <code>data-bs-toggle="modal"</code> / <code>data-bs-target</code> triggers and close via <code>data-bs-dismiss="modal"</code>. Backdrop click and Esc both dismiss. Delete confirmations dispatch a <code>confirmed</code> event for page scripts.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="panel-right"></i> Offcanvas anatomy</div>
+      </div>
+      <div class="card-body" style="font-size:13px;color:var(--text2);line-height:1.65">
+        Offcanvas panels slide in from the right edge with a backdrop. Open with <code>data-bs-toggle="offcanvas"</code>, dismiss with <code>data-bs-dismiss="offcanvas"</code>.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="message-circle"></i> Tooltip anatomy</div>
+      </div>
+      <div class="card-body" style="font-size:13px;color:var(--text2);line-height:1.65">
+        Tooltips read <code>data-bs-title</code> on hover and position above the trigger. The <code>title</code> attribute is consumed so no native tooltip leaks through.
+      </div>
+    </div>
+  </div>
+
+  <!-- modals -->
+  <div class="modal" id="ov-modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title"><div class="modal-icon"><i data-lucide="rocket"></i></div> Modal title</div>
+          <button type="button" class="icon-btn" data-bs-dismiss="modal" aria-label="Close"><i data-lucide="x"></i></button>
+        </div>
+        <div class="modal-body" style="font-size:13px;color:var(--text2);line-height:1.65">
+          Modals are pure CSS + a tiny bit of JS. This one shows the default sizing (max-width 500px) with an icon header. Try clicking the backdrop or pressing <kbd class="kbd">Esc</kbd>.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="ov-modal-sm" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title"><div class="modal-icon danger"><i data-lucide="trash-2"></i></div> Delete item?</div>
+        </div>
+        <div class="modal-body" style="font-size:13px;color:var(--text2);line-height:1.65">
+          This action is irreversible. The item and all its data will be permanently removed.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" data-confirm>Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="ov-modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title"><div class="modal-icon"><i data-lucide="file-text"></i></div> Large modal</div>
+          <button type="button" class="icon-btn" data-bs-dismiss="modal" aria-label="Close"><i data-lucide="x"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="g-row g-3 cols-2">
+            <div>
+              <label class="form-label" for="ov-name">Project name</label>
+              <input type="text" class="form-control" id="ov-name" placeholder="Acme redesign">
+            </div>
+            <div>
+              <label class="form-label" for="ov-owner">Owner</label>
+              <select class="form-select" id="ov-owner"><option>You</option><option>Team</option><option>External</option></select>
+            </div>
+          </div>
+          <div class="mt-3">
+            <label class="form-label" for="ov-desc">Description</label>
+            <textarea class="form-control" id="ov-desc" rows="3" placeholder="What are you building?"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Create project</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="ov-modal-xl" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title"><div class="modal-icon"><i data-lucide="panel-top"></i></div> Extra large modal</div>
+          <button type="button" class="icon-btn" data-bs-dismiss="modal" aria-label="Close"><i data-lucide="x"></i></button>
+        </div>
+        <div class="modal-body">
+          <table class="data-table">
+            <thead><tr><th>Feature</th><th>Free</th><th>Pro</th><th>Enterprise</th></tr></thead>
+            <tbody>
+              <tr><td class="name-cell">Projects</td><td class="mono-cell">1</td><td class="mono-cell">Unlimited</td><td class="mono-cell">Unlimited</td></tr>
+              <tr><td class="name-cell">Team seats</td><td class="mono-cell">—</td><td class="mono-cell">10</td><td class="mono-cell">Custom</td></tr>
+              <tr><td class="name-cell">Support</td><td class="mono-cell">Community</td><td class="mono-cell">Priority</td><td class="mono-cell">Dedicated</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- offcanvas -->
+  <div class="offcanvas" id="ov-canvas" tabindex="-1">
+    <div class="offcanvas-header">
+      <div class="offcanvas-title"><i data-lucide="settings-2"></i> Panel settings</div>
+      <button type="button" class="icon-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i data-lucide="x"></i></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column gap-4">
+      <div>
+        <label class="form-label" for="oc-title">Title</label>
+        <input type="text" class="form-control" id="oc-title" value="Quarterly review">
+      </div>
+      <div>
+        <label class="form-label" for="oc-color">Accent</label>
+        <select class="form-select" id="oc-color"><option>Indigo</option><option>Emerald</option><option>Rose</option></select>
+      </div>
+      <div class="d-flex flex-column gap-2">
+        <label class="form-check"><input type="checkbox" class="form-check-input" checked><span class="form-check-label">Visible to team</span></label>
+        <label class="form-check form-switch"><input type="checkbox" class="form-check-input" checked><span class="form-check-label">Auto-archive</span></label>
+      </div>
+      <button type="button" class="btn btn-primary btn-block">Save panel</button>
+    </div>
+  </div>
+
+</section>

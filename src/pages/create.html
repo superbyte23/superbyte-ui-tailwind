@@ -1,0 +1,125 @@
+<!--
+title: Create
+crumb: Create
+script: create
+active: create
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Create</h1><p>theme lab · pick a combo or let the dice roll, then copy the preset</p></div>
+  </div>
+
+  <div class="g-row cols-2" style="grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="palette"></i> Theme lab</div>
+      </div>
+      <div class="card-body">
+        <button type="button" class="btn btn-primary w-100 mb-4" id="create-random"><i data-lucide="shuffle"></i> Surprise me — random theme</button>
+
+        <div class="customizer-section">
+          <label class="customizer-label">Accent color</label>
+          <div class="swatch-grid" id="create-swatches"></div>
+        </div>
+
+        <div class="customizer-section">
+          <label class="customizer-label">Base theme</label>
+          <div class="base-theme-grid" id="create-base-themes"></div>
+        </div>
+
+        <div class="customizer-section">
+          <label class="customizer-label">Font</label>
+          <div class="d-flex align-center gap-3">
+            <select class="form-select flex-grow-1" id="create-font"></select>
+            <span class="font-preview" id="create-font-preview" style="font-family:'Ubuntu',sans-serif">Aa</span>
+          </div>
+        </div>
+
+        <div class="customizer-section">
+          <label class="customizer-label">Corner radius</label>
+          <div class="d-flex gap-2" id="create-radius">
+            <button type="button" class="radius-opt" data-r="4px" data-rs="2px">Sharp</button>
+            <button type="button" class="radius-opt" data-r="8px" data-rs="4px">Default</button>
+            <button type="button" class="radius-opt active" data-r="14px" data-rs="8px">Round</button>
+          </div>
+        </div>
+
+        <div class="customizer-section">
+          <label class="customizer-label">Appearance</label>
+          <div class="d-flex gap-2" id="create-appearance">
+            <button type="button" class="radius-opt" data-mode="light"><i data-lucide="sun"></i> Light</button>
+            <button type="button" class="radius-opt active" data-mode="dark"><i data-lucide="moon"></i> Dark</button>
+          </div>
+        </div>
+
+        <div class="customizer-section">
+          <label class="customizer-label">Layout</label>
+          <div class="g-row g-2 cols-2">
+            <button type="button" class="radius-opt w-100" id="create-compact"><i data-lucide="dock"></i> Compact</button>
+            <button type="button" class="radius-opt w-100 active" id="create-roomy"><i data-lucide="stretch-horizontal"></i> Roomy</button>
+            <button type="button" class="radius-opt w-100 active" id="create-fluid"><i data-lucide="expand"></i> Fluid</button>
+            <button type="button" class="radius-opt w-100" id="create-boxed"><i data-lucide="shrink"></i> Boxed</button>
+          </div>
+        </div>
+
+        <div class="customizer-section mb-0">
+          <label class="customizer-label">Base font size</label>
+          <div class="d-flex align-center gap-3">
+            <input type="range" class="form-range flex-grow-1" id="create-fs" min="13" max="17" step="1" value="14">
+            <span id="create-fs-out" style="font-family:var(--mono);font-size:12px;color:var(--text2);min-width:34px;text-align:right">14px</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column gap-4">
+      <div class="card">
+        <div class="card-header d-flex align-center gap-2">
+          <div class="card-title flex-1"><i data-lucide="monitor"></i> Preview</div>
+          <button type="button" class="btn btn-sm btn-primary" id="create-copy-cmd"><i data-lucide="copy"></i> Copy command</button>
+        </div>
+        <div class="card-body">
+          <div class="preview-frame">
+            <div class="d-flex align-center gap-2 pb-3 mb-3 border-bottom">
+              <div class="preview-logo"><i data-lucide="cube"></i></div>
+              <div class="fw-semibold">Acme Dashboard</div>
+              <div class="ms-auto d-flex align-center gap-2">
+                <span class="badge text-bg-primary">v2.0</span>
+                <div class="avatar-circle" style="width:26px;height:26px;font-size:11px">JD</div>
+              </div>
+            </div>
+            <div class="g-row g-3 cols-3">
+              <div class="preview-stat"><div class="preview-stat-n">2,481</div><div class="preview-stat-l">Total users</div></div>
+              <div class="preview-stat"><div class="preview-stat-n">$12.4k</div><div class="preview-stat-l">Revenue</div></div>
+              <div class="preview-stat"><div class="preview-stat-n">98.2%</div><div class="preview-stat-l">Uptime</div></div>
+            </div>
+            <div class="d-flex justify-between align-center mt-3 mb-1">
+              <span class="preview-stat-l">Quarterly goal</span><span class="preview-stat-l">64%</span>
+            </div>
+            <div class="progress" style="height:8px"><div class="progress-bar" style="width:64%"></div></div>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <button type="button" class="btn btn-sm btn-primary"><i data-lucide="plus"></i> Create project</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Cancel</button>
+              <button type="button" class="btn btn-sm" style="background:var(--accent-bg);color:var(--accent-h)">Soft accent</button>
+            </div>
+            <input type="text" class="form-control form-control-sm mt-3" placeholder="name@company.com" disabled>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header d-flex align-center gap-2">
+          <div class="card-title flex-1"><i data-lucide="code-xml"></i> Generated preset</div>
+          <span class="badge text-bg-secondary">npx superbyte</span>
+        </div>
+        <div class="card-body p-0">
+          <pre class="preset-code" id="preset-cmd"></pre>
+          <pre class="preset-code preset-json" id="preset-json"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

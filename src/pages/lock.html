@@ -1,0 +1,27 @@
+<!--
+title: Lock screen
+layout: auth
+script: auth
+active: lock
+-->
+
+<div class="auth-panel text-center">
+  <div class="d-flex justify-center mb-4">
+    <div class="avatar-circle" style="width:64px;height:64px;font-size:20px;margin:0">JC</div>
+  </div>
+  <h1>John Canete</h1>
+  <p class="sub">Session locked. Enter your password to continue.</p>
+
+  <form id="auth-form" novalidate>
+    <div class="mb-3">
+      <label class="form-label" for="lock-pass" style="text-align:start">Password</label>
+      <div class="input-group">
+        <input class="form-control" type="password" id="lock-pass" placeholder="Password" required autofocus>
+        <button class="input-group-text" type="button" data-toggle-pass="lock-pass" aria-label="Show password"><i data-lucide="eye"></i></button>
+      </div>
+    </div>
+    <button class="btn btn-primary w-100" type="submit"><i data-lucide="unlock"></i> Unlock</button>
+  </form>
+</div>
+
+<div class="auth-foot">Not you? <a href="login.html" style="color:var(--accent-h)">Switch account</a></div>

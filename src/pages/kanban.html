@@ -1,0 +1,164 @@
+<!--
+title: Kanban
+crumb: Kanban
+script: kanban
+active: kanban
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Kanban</h1><p>drag cards between lanes — vanilla HTML5 drag &amp; drop</p></div>
+  </div>
+
+  <div class="kbd-board" id="kbd-board">
+    <div class="kbd-col" data-lane="backlog">
+      <div class="kbd-col-head">
+        <div class="kbd-title"><i data-lucide="inbox" style="width:15px;height:15px;color:var(--text3)"></i> Backlog</div>
+        <span class="kbd-count" data-count>4</span>
+      </div>
+      <div class="kbd-lane">
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-slate">Chore</span></div>
+          <div class="kbd-card-title">Migrate analytics to the new ETL pipeline</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">AL</div></div>
+            <span class="kbd-due"><i data-lucide="calendar-clock" style="width:11px;height:11px"></i> Aug 24</span>
+          </div>
+        </div>
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-indigo">Design</span></div>
+          <div class="kbd-card-title">Finalize empty-state illustrations</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">JD</div><div class="avatar-circle">MK</div></div>
+            <span class="kbd-due"><i data-lucide="calendar-clock" style="width:11px;height:11px"></i> Aug 26</span>
+          </div>
+        </div>
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-amber">Content</span></div>
+          <div class="kbd-card-title">Write the v1.4 changelog</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">SR</div></div>
+            <span class="kbd-due"><i data-lucide="calendar-clock" style="width:11px;height:11px"></i> Aug 28</span>
+          </div>
+        </div>
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-slate">Chore</span></div>
+          <div class="kbd-card-title">Clean up deprecated endpoints</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">OF</div></div>
+            <span class="kbd-due"><i data-lucide="calendar-clock" style="width:11px;height:11px"></i> Sep 02</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kbd-col" data-lane="todo">
+      <div class="kbd-col-head">
+        <div class="kbd-title"><i data-lucide="list-todo" style="width:15px;height:15px;color:var(--sky)"></i> To do</div>
+        <span class="kbd-count" data-count>3</span>
+      </div>
+      <div class="kbd-lane">
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-green">Feature</span></div>
+          <div class="kbd-card-title">Add row-level permissions to data tables</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">PS</div></div>
+            <span class="kbd-due"><i data-lucide="calendar-clock" style="width:11px;height:11px"></i> Aug 21</span>
+          </div>
+        </div>
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-sky">Docs</span></div>
+          <div class="kbd-card-title">Document the customizer preset format</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">LF</div></div>
+            <span class="kbd-due"><i data-lucide="calendar-clock" style="width:11px;height:11px"></i> Aug 22</span>
+          </div>
+        </div>
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-indigo">Design</span></div>
+          <div class="kbd-card-title">Rework sidebar group hover states</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">TB</div></div>
+            <span class="kbd-due"><i data-lucide="calendar-clock" style="width:11px;height:11px"></i> Aug 25</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kbd-col" data-lane="doing">
+      <div class="kbd-col-head">
+        <div class="kbd-title"><i data-lucide="loader-circle" style="width:15px;height:15px;color:var(--yellow)"></i> In progress</div>
+        <span class="kbd-count" data-count>3</span>
+      </div>
+      <div class="kbd-lane">
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-green">Feature</span><span class="tag tag-indigo">Frontend</span></div>
+          <div class="kbd-card-title">Dark-mode color pass on all chart pages</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">SC</div><div class="avatar-circle">OF</div></div>
+            <span class="kbd-due"><i data-lucide="calendar-clock" style="width:11px;height:11px"></i> Aug 18</span>
+          </div>
+        </div>
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-sky">Bug</span></div>
+          <div class="kbd-card-title">Fix sticky toolbar on mobile scroll</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">MK</div></div>
+            <span class="kbd-due"><i data-lucide="calendar-clock" style="width:11px;height:11px"></i> Aug 19</span>
+          </div>
+        </div>
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-amber">Content</span></div>
+          <div class="kbd-card-title">Audit landing-page copy for tone</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">SR</div></div>
+            <span class="kbd-due"><i data-lucide="calendar-clock" style="width:11px;height:11px"></i> Aug 20</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kbd-col" data-lane="done">
+      <div class="kbd-col-head">
+        <div class="kbd-title"><i data-lucide="check-circle-2" style="width:15px;height:15px;color:var(--green)"></i> Done</div>
+        <span class="kbd-count" data-count>4</span>
+      </div>
+      <div class="kbd-lane">
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-green">Feature</span></div>
+          <div class="kbd-card-title">Ship the theme lab preset builder</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">AL</div></div>
+            <span class="kbd-due" style="color:var(--text3)">Aug 14</span>
+          </div>
+        </div>
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-sky">Bug</span></div>
+          <div class="kbd-card-title">Resolve iframe scroll-jump on landing</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">JD</div></div>
+            <span class="kbd-due" style="color:var(--text3)">Aug 12</span>
+          </div>
+        </div>
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-slate">Chore</span></div>
+          <div class="kbd-card-title">Vendor all 17 theme fonts locally</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">MK</div></div>
+            <span class="kbd-due" style="color:var(--text3)">Aug 10</span>
+          </div>
+        </div>
+        <div class="kbd-card" draggable="true">
+          <div class="kbd-card-top"><span class="tag tag-green">Feature</span></div>
+          <div class="kbd-card-title">Pre-paint theme bootstrap</div>
+          <div class="kbd-card-foot">
+            <div class="avatar-stack"><div class="avatar-circle">AL</div><div class="avatar-circle">PS</div></div>
+            <span class="kbd-due" style="color:var(--text3)">Aug 06</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

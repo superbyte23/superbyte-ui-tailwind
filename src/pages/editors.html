@@ -1,0 +1,68 @@
+<!--
+title: Editors
+crumb: Editors
+script: editors
+active: editors
+-->
+
+<section class="page-section active" id="page-editors">
+
+  <div class="page-head">
+    <div><h1>Editors</h1><p>Quill rich text + CodeMirror code editor, both theme-aware</p></div>
+  </div>
+
+  <div class="g-row g-4 cols-2">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="feather"></i> Rich text</div>
+        <div class="card-sub">quill · snow</div>
+      </div>
+      <div class="card-body">
+        <div id="ql-editor">
+          <p>Welcome to the <strong>Quill</strong> rich text editor.</p>
+          <p><em>Type here, format with the toolbar above, then hit <code>Export HTML</code> to see the delta.</em></p>
+          <blockquote>Superbyte UI — every component ships theme-aware.</blockquote>
+          <ol><li>Write</li><li>Format</li><li>Export</li></ol>
+        </div>
+        <div class="d-flex gap-2 mt-3">
+          <button type="button" class="btn btn-sm btn-ghost" id="ql-clear"><i data-lucide="eraser"></i> Clear</button>
+          <button type="button" class="btn btn-sm btn-ghost" id="ql-export"><i data-lucide="code-xml"></i> Export HTML</button>
+        </div>
+        <pre class="ql-out d-none" id="ql-out"></pre>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="code"></i> Code editor</div>
+        <div class="card-sub">codemirror · superbyte theme</div>
+      </div>
+      <div class="card-body">
+        <div class="d-flex align-center gap-2 mb-2">
+          <select class="form-select" id="cm-mode" style="width:170px;padding:5px 8px;font-size:12px">
+            <option value="javascript">JavaScript</option>
+            <option value="xml">HTML / XML</option>
+            <option value="css">CSS</option>
+          </select>
+          <span class="ms-auto mono-sm" id="cm-status">ready</span>
+        </div>
+        <textarea id="cm-textarea">// Superbyte UI — theme-aware CodeMirror
+const colors = { accent: '#2961fd', green: '#22c55e' }
+
+export function greet(name) {
+  return `Hello, ${name}!`
+}
+
+document.querySelector('#app')
+  .addEventListener('click', () => console.log('ok'))
+</textarea>
+        <div class="d-flex gap-2 mt-3">
+          <button type="button" class="btn btn-sm btn-ghost" id="cm-run"><i data-lucide="play"></i> Run</button>
+          <button type="button" class="btn btn-sm btn-ghost" id="cm-format"><i data-lucide="indent-increase"></i> Re-indent</button>
+        </div>
+        <pre class="ql-out d-none" id="cm-out"></pre>
+      </div>
+    </div>
+  </div>
+
+</section>

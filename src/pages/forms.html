@@ -1,0 +1,184 @@
+<!--
+title: Forms
+crumb: Forms
+script: forms
+active: forms
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Forms</h1><p>all the standard input controls, states and layouts</p></div>
+  </div>
+
+  <form id="forms-form" novalidate>
+    <div class="g-row g-4 cols-2">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i data-lucide="type"></i> Inputs</div>
+          <div class="card-sub">form-control</div>
+        </div>
+        <div class="card-body d-flex flex-column gap-4">
+          <div>
+            <label class="form-label" for="f-name">Full name</label>
+            <input type="text" class="form-control" id="f-name" placeholder="Ada Lovelace" required>
+          </div>
+          <div class="g-row g-2 cols-2">
+            <div>
+              <label class="form-label" for="f-email">Email address</label>
+              <input type="email" class="form-control" id="f-email" placeholder="you@company.com" required>
+              <span class="form-text">We never share your email.</span>
+            </div>
+            <div>
+              <label class="form-label" for="f-pass">Password</label>
+              <input type="password" class="form-control" id="f-pass" placeholder="Min 8 characters" required>
+            </div>
+          </div>
+          <div>
+            <label class="form-label" for="f-phone">Phone</label>
+            <div class="input-group">
+              <span class="input-group-text">+1</span>
+              <input type="text" class="form-control" id="f-phone" placeholder="(555) 000-0000">
+            </div>
+          </div>
+          <div>
+            <label class="form-label" for="f-search">Search</label>
+            <div class="input-group">
+              <span class="input-group-text"><i data-lucide="search" style="width:14px;height:14px"></i></span>
+              <input type="search" class="form-control" id="f-search" placeholder="Search projects…">
+              <button type="button" class="btn btn-primary">Go</button>
+            </div>
+          </div>
+          <div>
+            <label class="form-label" for="f-select">Select</label>
+            <select class="form-select" id="f-select">
+              <option>Product design</option>
+              <option>Engineering</option>
+              <option>Marketing</option>
+              <option>Support</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label" for="f-area">Textarea</label>
+            <textarea class="form-control" id="f-area" rows="4" placeholder="Write something…" style="resize:vertical"></textarea>
+            <span class="form-text"><span id="f-area-count">0</span> / 200 characters</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i data-lucide="sliders-horizontal"></i> Ranges, checks & switches</div>
+          <div class="card-sub">form-range · form-check</div>
+        </div>
+        <div class="card-body d-flex flex-column gap-4">
+          <div>
+            <div class="d-flex justify-between align-center mb-1">
+              <label class="form-label" for="f-range" style="margin:0">Volume</label>
+              <span id="f-range-out" class="tag tag-slate">50</span>
+            </div>
+            <input type="range" class="form-range" id="f-range" min="0" max="100" value="50">
+          </div>
+          <div>
+            <label class="form-label" style="margin-bottom:10px">Checkboxes</label>
+            <div class="d-flex flex-column gap-2">
+              <label class="form-check"><input type="checkbox" class="form-check-input" checked><span class="form-check-label">Notify me about updates</span></label>
+              <label class="form-check"><input type="checkbox" class="form-check-input"><span class="form-check-label">Send me weekly digest</span></label>
+              <label class="form-check"><input type="checkbox" class="form-check-input" disabled><span class="form-check-label">Opt into beta (disabled)</span></label>
+            </div>
+          </div>
+          <div>
+            <label class="form-label" style="margin-bottom:10px">Radios</label>
+            <div class="d-flex flex-column gap-2">
+              <label class="form-check"><input type="radio" class="form-check-input" name="f-plan" checked><span class="form-check-label">Free — 1 project</span></label>
+              <label class="form-check"><input type="radio" class="form-check-input" name="f-plan"><span class="form-check-label">Pro — unlimited projects</span></label>
+              <label class="form-check"><input type="radio" class="form-check-input" name="f-plan"><span class="form-check-label">Enterprise — custom</span></label>
+            </div>
+          </div>
+          <div>
+            <label class="form-label" style="margin-bottom:10px">Switches</label>
+            <div class="d-flex flex-column gap-2">
+              <label class="form-check form-switch"><input type="checkbox" class="form-check-input" checked><span class="form-check-label">Dark mode</span></label>
+              <label class="form-check form-switch"><input type="checkbox" class="form-check-input"><span class="form-check-label">Reduce motion</span></label>
+              <label class="form-check form-switch"><input type="checkbox" class="form-check-input" checked><span class="form-check-label">Auto-refresh</span></label>
+            </div>
+          </div>
+          <div>
+            <label class="form-label" for="f-file">File</label>
+            <input type="file" class="form-control" id="f-file">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="g-row g-4 cols-2 mt-1">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i data-lucide="lock"></i> Disabled & readonly</div>
+          <div class="card-sub">disabled · readonly</div>
+        </div>
+        <div class="card-body d-flex flex-column gap-4">
+          <div>
+            <label class="form-label" for="d-name">Disabled</label>
+            <input type="text" class="form-control" id="d-name" value="You can't edit me" disabled>
+          </div>
+          <div>
+            <label class="form-label" for="d-email">Readonly</label>
+            <input type="email" class="form-control" id="d-email" value="readonly@example.com" readonly>
+          </div>
+          <div>
+            <label class="form-label" for="d-sel">Disabled select</label>
+            <select class="form-select" id="d-sel" disabled>
+              <option>Locked option</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label" for="d-file">File upload</label>
+            <input type="file" class="form-control" id="d-file">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i data-lucide="alert-triangle"></i> Validation states</div>
+          <div class="card-sub">is-invalid</div>
+        </div>
+        <div class="card-body d-flex flex-column gap-4">
+          <div>
+            <label class="form-label" for="v-name">Name</label>
+            <input type="text" class="form-control is-invalid" id="v-name" value="Ada">
+            <span class="form-text" style="color:var(--danger)">Please enter your full name.</span>
+          </div>
+          <div>
+            <label class="form-label" for="v-email">Email</label>
+            <input type="email" class="form-control is-invalid" id="v-email" value="ada@">
+            <span class="form-text" style="color:var(--danger)">That doesn't look like a valid email.</span>
+          </div>
+          <div>
+            <label class="form-label" for="v-sel">Select</label>
+            <select class="form-select is-invalid" id="v-sel">
+              <option>Choose a role…</option>
+              <option>Admin</option>
+              <option>Member</option>
+            </select>
+            <span class="form-text" style="color:var(--danger)">A role is required.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="save"></i> Form actions</div>
+      </div>
+      <div class="card-body d-flex align-center gap-2 flex-wrap">
+        <button type="submit" class="btn btn-primary"><i data-lucide="save"></i> Save changes</button>
+        <button type="reset" class="btn btn-ghost">Reset</button>
+        <button type="button" class="btn btn-outline-secondary">Cancel</button>
+        <span class="ms-auto text-center" style="font-size:12px;color:var(--text3)">Press <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd> to save</span>
+      </div>
+    </div>
+  </form>
+
+</section>

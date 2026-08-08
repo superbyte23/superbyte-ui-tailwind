@@ -1,0 +1,100 @@
+<!--
+title: Docs
+crumb: Docs
+active: docs
+-->
+
+<section class="page-section active">
+
+  <div class="page-head">
+    <div><h1>Docs</h1><p>getting started — structure, theming and the conventions that keep 48 pages consistent</p></div>
+  </div>
+
+  <div class="g-row g-4 cols-2">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="rocket"></i> Getting started</div>
+      </div>
+      <div class="card-body d-flex flex-column gap-3" style="font-size:13px;color:var(--text2);line-height:1.7">
+        <p>Superbyte UI is a static admin dashboard — HTML, CSS and vanilla JS. There is no build step at runtime: the <code>generate</code> script assembles pages from fragments, Vite bundles modules for production.</p>
+        <pre class="preset-code"><code>npm install
+npm run generate   # assemble preview/ + index.html
+npm run dev        # serve on :8765
+npm run build      # production bundle → dist/</code></pre>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="folder-tree"></i> Structure</div>
+      </div>
+      <div class="card-body">
+        <pre class="preset-code" style="border:1px solid var(--border2);border-radius:var(--radius-sm)"><code>src/
+├─ shell/          # app · auth · landing templates (%CON&percnt;TENT%)
+├─ pages/          # page fragments + front-matter
+├─ styles/         # app.css (design system) · landing.css
+├─ js/             # theme · components · main + pages/
+└─ scripts/        # assemble.mjs · check.mjs
+public/            # fonts, brand assets, pre-paint.js
+preview/           # generated app pages
+index.html         # generated landing page</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-row g-4 cols-2 mt-4">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="palette"></i> Theming</div>
+      </div>
+      <div class="card-body d-flex flex-column gap-3" style="font-size:13px;color:var(--text2);line-height:1.7">
+        <p>Theme is a set of CSS variables resolved at <code>:root</code> (dark) or <code>.light</code>. The pre-paint script in <code>&lt;head&gt;</code> applies saved prefs <em>before first paint</em> — no theme flash.</p>
+        <ul style="padding-inline-start:20px;display:flex;flex-direction:column;gap:6px">
+          <li><b>Accent</b> — 19 colors via <code>--accent*</code> vars, applied on <code>&lt;html&gt;</code>.</li>
+          <li><b>Base palette</b> — 7 neutrals via <code>body[data-base-theme]</code>.</li>
+          <li><b>Fonts</b> — 17 local families; <code>--sans</code> / <code>--mono</code> swap.</li>
+          <li><b>Radius</b> — 4 / 8 / 14&nbsp;px via <code>--radius*</code>.</li>
+          <li><b>Width &amp; density</b> — fluid / boxed / contained, comfy / condensed.</li>
+        </ul>
+        <p>Prefs persist under <code>grid_admin_*</code> keys and restore on reload.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i data-lucide="list-check"></i> Conventions</div>
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-flush">
+          <div class="list-group-item"><b style="color:var(--text)">Pre-paint is mandatory</b><span class="mono-sm ms-auto">theme-bootstrap</span></div>
+          <div class="list-group-item"><b style="color:var(--text)">Charts need fixed-height wrappers</b><span class="mono-sm ms-auto">style="height:260px"</span></div>
+          <div class="list-group-item"><b style="color:var(--text)">No CDN</b><span class="mono-sm ms-auto">vendor/</span></div>
+          <div class="list-group-item"><b style="color:var(--text)">Boxed = container grid</b><span class="mono-sm ms-auto">--app-boxed-w</span></div>
+          <div class="list-group-item"><b style="color:var(--text)">Icons are Lucide</b><span class="mono-sm ms-auto">data-lucide</span></div>
+          <div class="list-group-item"><b style="color:var(--text)">Overflow-x: clip, not hidden</b><span class="mono-sm ms-auto">keeps sticky alive</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header">
+      <div class="card-title"><i data-lucide="file-plus-2"></i> Adding a page</div>
+    </div>
+    <div class="card-body">
+      <pre class="preset-code" style="border:1px solid var(--border2);border-radius:var(--radius-sm)"><code>&lt;!--
+title: My Page
+crumb: My Page
+script: mypage     ← optional → /src/js/pages/mypage.js
+active: mypage     ← sidebar highlight key
+layout: app        ← app | auth | landing
+--&gt;
+
+&lt;section class="page-section active"&gt;
+  &lt;div class="page-head"&gt;&lt;div&gt;&lt;h1&gt;My Page&lt;/h1&gt;&lt;p&gt;short description&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;!-- content here --&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+  </div>
+
+</section>

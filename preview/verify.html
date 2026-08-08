@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verify email</title>
+<link rel="icon" href="/img/favicon-32.png"><link rel="icon" href="/img/favicon-192.png" sizes="192x192">
+<link rel="stylesheet" href="/src/styles/app.css">
+<script src="/pre-paint.js"></script>
+</head>
+<body>
+
+<div id="toast-container"></div>
+
+<div class="auth-page">
+  <div class="auth-card">
+
+    <div class="auth-logo">
+      <div class="logo-mark"><img src="/img/brand.png" alt="Superbyte UI"></div>
+      Superbyte UI
+      <span style="color:var(--text3);font-weight:400;font-size:11px">v1.0.0</span>
+    </div>
+
+    <button class="icon-btn auth-theme-btn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+      <span class="theme-icon-moon"><i data-lucide="moon"></i></span>
+      <span class="theme-icon-sun"><i data-lucide="sun"></i></span>
+    </button>
+
+<div class="auth-panel">
+  <div class="auth-shield success"><i data-lucide="mail-check"></i></div>
+  <h1>Verify your email</h1>
+  <p class="sub">We sent a 6-digit code to <span class="font-mono" style="color:var(--text2)">j***@example.com</span>. Enter it below.</p>
+
+  <form id="auth-form" novalidate>
+    <div class="d-flex gap-2 mb-3 justify-center">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 1">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 2">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 3">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 4">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 5">
+      <input class="otp-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 6">
+    </div>
+    <div class="text-center mb-3" style="font-size:12px;color:var(--text3)">
+      Didn't get the code?
+      <button type="button" class="btn-link" data-resend="Resend code" style="color:var(--accent-h);background:none;border:0;font-size:12px;cursor:pointer">Resend code</button>
+    </div>
+    <button class="btn btn-primary w-100" type="submit">Verify email <i data-lucide="check"></i></button>
+  </form>
+</div>
+
+<div class="auth-foot">Changed your mind? <a href="login.html" style="color:var(--accent-h)">Back to sign in</a></div>
+
+
+    <div class="auth-legal">© 2026 Superbyte UI · <a href="#" onclick="showToast('success','Demo only')">Terms</a> · <a href="#" onclick="showToast('success','Demo only')">Privacy</a></div>
+
+  </div>
+</div>
+
+<script type="module" src="/src/js/pages/auth.js"></script>
+<script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
