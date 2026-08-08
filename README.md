@@ -16,6 +16,7 @@ dependencies, fully offline.
 <br/>
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)](https://github.com/superbyte23/superbyte-ui-tailwind/releases)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8.svg)](https://tailwindcss.com)
 [![Vite](https://img.shields.io/badge/Vite-6-646cff.svg)](https://vitejs.dev)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/superbyte23/superbyte-ui-tailwind)
